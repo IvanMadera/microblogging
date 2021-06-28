@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <b-navbar>
+    <div>
+        <b-navbar>
             <template #brand>
                 <b-navbar-item tag="router-link" :to="{ path: '/' }">
                     <img src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
@@ -32,7 +32,7 @@
                         </b-input>
                     </b-field>
                 </b-navbar-item>
-                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <b-navbar-item tag="div">
                     <div class="buttons">
                         <b-button type="is-success" icon-left="account-circle" size="is-default">
                             <strong>Profile</strong>
@@ -41,31 +41,11 @@
                 </b-navbar-item>
             </template>
         </b-navbar>
-    <router-view/>
-  </div>
+    </div>
 </template>
 
-<style>
-@import "~bulma/css/bulma.css";
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+    export default {
+        name: 'Navbar'
+    }
+</script>
