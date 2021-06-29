@@ -26,17 +26,17 @@
                                 </b-button>
                             </div>
                         </template>
-                        <b-dropdown-item
+                        <b-navbar-item 
                             v-for="(menu, index) in menus"
                             :key="index"
-                            :value="menu" aria-role="listitem">
+                            :value="menu" aria-role="listitem" tag="router-link" :to="{path: menu.ref}">
                             <div class="media">
                                 <b-icon class="media-left" :icon="menu.icon"></b-icon>
                                 <div class="media-content">
                                     <h3>{{menu.text}}</h3>
                                 </div>
                             </div>
-                        </b-dropdown-item>
+                        </b-navbar-item>
                     </b-dropdown>
                 </b-navbar-item>
             </template>
@@ -55,6 +55,14 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
+                <b-navbar-dropdown>
+                    <b-navbar-item href="#">
+                        About
+                    </b-navbar-item>
+                    <b-navbar-item href="#">
+                        Contact
+                    </b-navbar-item>
+                </b-navbar-dropdown>
             </template>
         </b-navbar>
     </div>
@@ -69,8 +77,8 @@
                 isScrollable: false,
                 maxHeight: 200,
                 menus: [
-                    { icon: 'state-machine', text: 'Machine Learning' },
-                    { icon: 'xml', text: 'Software' },
+                    { icon: 'state-machine', text: 'Machine Learning', ref: '/' },
+                    { icon: 'xml', text: 'Software', ref: '/about' },
                     { icon: 'biohazard', text: 'Bioengineering' },
                     { icon: 'math-compass', text: 'Aplied Maths' },
                     { icon: 'robot', text: 'Robotics' },
