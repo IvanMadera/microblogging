@@ -3,7 +3,7 @@
         <b-navbar>
             <template #brand>
                 <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                    <img src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+                    <img src="@/assets/img/cabecera1.gif"
                         alt="Lightweight UI components for Vue.js based on Bulma">
                 </b-navbar-item>
             </template>
@@ -16,7 +16,7 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
-                <b-navbar-item>
+                <b-navbar-item align="left">
                     <b-dropdown v-model="navigation" position="is-bottom-left" append-to-body aria-role="menu">
                         <template #trigger>
                             <div class="buttons">
@@ -43,26 +43,24 @@
 
             <template #end>
                 <b-navbar-item>
-                    <b-field>
-                        <b-input placeholder="Search..." type="search" icon="magnify" icon-clickable>
-                        </b-input>
-                    </b-field>
+                    <b-autocomplete
+                        rounded
+                        v-model="name"
+                        :data="filteredDataArray"
+                        placeholder="Search..."
+                        icon="magnify"
+                        clearable
+                        @select="option => selected = option">
+                        <template #empty>No results found</template>
+                    </b-autocomplete>
                 </b-navbar-item>
-                <b-navbar-item tag="div">
+                <b-navbar-item tag="router-link" :to="{ path: '/' }">
                     <div class="buttons">
                         <b-button type="is-success" icon-left="account-circle" size="is-default">
                             <strong>Profile</strong>
                         </b-button>
                     </div>
                 </b-navbar-item>
-                <b-navbar-dropdown>
-                    <b-navbar-item href="#">
-                        About
-                    </b-navbar-item>
-                    <b-navbar-item href="#">
-                        Contact
-                    </b-navbar-item>
-                </b-navbar-dropdown>
             </template>
         </b-navbar>
     </div>
@@ -86,7 +84,33 @@
                     { icon: 'security', text: 'Cibersecurity' },
                     { icon: 'microsoft-visual-studio-code', text: 'Wolfcode' },
                     { icon: 'google-controller', text: 'Games' }
-                ]
+                ],
+                data: [
+                    'Angular',
+                    'Angular 2',
+                    'Aurelia',
+                    'Backbone',
+                    'Ember',
+                    'jQuery',
+                    'Meteor',
+                    'Node.js',
+                    'Polymer',
+                    'React',
+                    'RxJS',
+                    'Vue.js'
+                ],
+                name: '',
+                selected: null
+            }
+        },
+        computed: {
+            filteredDataArray() {
+                return this.data.filter((option) => {
+                    return option
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                })
             }
         }
     }
