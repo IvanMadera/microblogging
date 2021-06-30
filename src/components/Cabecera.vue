@@ -1,6 +1,8 @@
 <template>
     <div class="container has-text-left">
-        <h1 class="title">{{ title }}</h1>
+        <div class="m-10">
+            <h1 class="title">{{ title }}</h1>
+        </div>
     </div>
 </template>
 
@@ -12,3 +14,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.m-10{
+    margin: 10px
+}
+</style>
