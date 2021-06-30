@@ -44,6 +44,7 @@
             <template #end>
                 <b-navbar-item>
                     <b-autocomplete
+                        class="has-text-left"
                         rounded
                         v-model="name"
                         :data="filteredDataArray"
