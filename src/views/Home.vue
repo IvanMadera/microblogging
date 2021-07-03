@@ -4,6 +4,8 @@
     <div class="mt-20"></div>
     <Cabecera title="Home / Muro"></Cabecera>
     <Publicacion></Publicacion>
+    
+    <Muro></Muro>
   </div>
 </template>
 
@@ -12,13 +14,16 @@
 import Navbar from '@/components/Navbar.vue'
 import Cabecera from '@/components/Cabecera.vue'
 import Publicacion from '@/components/Publicacion.vue'
+import Muro from '@/components/Muro.vue'
 
 export default {
   name: 'Home',
   components: {
     Navbar,
     Cabecera,
-    Publicacion
+    Publicacion,
+    Muro
   }
+
 }
 </script>
