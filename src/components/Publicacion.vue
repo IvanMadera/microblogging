@@ -6,25 +6,24 @@
             </b-field>
             <div class="buttons ml-10">
                 <b-button type="is-success">Publicar</b-button>
-
-                    <b-dropdown v-model= "nameTag" aria-role="list" append-to-body>
-                        <template #trigger>
-                                    <b-button :label="nameTag.text" type="is-primary" :icon-left="nameTag.icon" icon-right="menu-down" />
-                                <!-- <b-button type="is-light" icon-left="tag-multiple" size="is-default">
-                                    <strong>Tags</strong>
-                                    <b-icon icon="menu-down"></b-icon>
-                                </b-button> -->
-                        </template>
-                        <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta" aria-role="listitem">
-                            <div class="media">
-                                <b-icon class="media-left" :icon="etiqueta.icon"></b-icon>
-                                <div class="media-content">
-                                    <h3>{{etiqueta.text}}</h3>
-                                    <small>{{ etiqueta.description }}</small>
-                                </div>
+                <b-dropdown v-model= "nameTag" aria-role="list" append-to-body>
+                    <template #trigger>
+                                <b-button :label="nameTag.text" type="is-primary" :icon-left="nameTag.icon" icon-right="menu-down" />
+                            <!-- <b-button type="is-light" icon-left="tag-multiple" size="is-default">
+                                <strong>Tags</strong>
+                                <b-icon icon="menu-down"></b-icon>
+                            </b-button> -->
+                    </template>
+                    <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta" aria-role="listitem">
+                        <div class="media">
+                            <b-icon class="media-left" :icon="etiqueta.icon"></b-icon>
+                            <div class="media-content">
+                                <h3>{{etiqueta.text}}</h3>
+                                <small>{{ etiqueta.description }}</small>
                             </div>
-                        </b-dropdown-item>
-                    </b-dropdown>
+                        </div>
+                    </b-dropdown-item>
+                </b-dropdown>
             </div>
         </div>
     </div>
