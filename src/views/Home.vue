@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <Navbar></Navbar>
-    <div class="mt-20"></div>
-    <Cabecera title="Home / Muro"></Cabecera>
+    <Cabecera title="Muro"></Cabecera>
     <Publicacion></Publicacion>
     
     <Muro></Muro>

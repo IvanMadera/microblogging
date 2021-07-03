@@ -34,13 +34,3 @@
     color: #42b983;
 }
 </style>
-
-<script>
-    export default {
-        methods: {
-            clickMe() {
-                this.$buefy.notification.open('Clicked!!')
-            }
-        }
-    }
-</script>

@@ -16,6 +16,13 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/report' }">
+                    <div class="buttons">
+                        <b-button type="is-light" icon-left="flag" size="is-default">
+                            <strong>Reportes</strong>
+                        </b-button>
+                    </div>
+                </b-navbar-item>
                 <b-navbar-item align="left">
                     <b-dropdown v-model="navigation" position="is-bottom-left" append-to-body aria-role="menu">
                         <template #trigger>
@@ -26,7 +33,8 @@
                                 </b-button>
                             </div>
                         </template>
-                        <b-navbar-item 
+                        <b-navbar-item
+                            append-to-body 
                             v-for="(menu, index) in menus"
                             :key="index"
                             :value="menu" aria-role="listitem" tag="router-link" :to="{path: menu.ref}">
@@ -78,7 +86,7 @@
                 menus: [
                     { icon: 'state-machine', text: 'Machine Learning', ref: '/' },
                     { icon: 'xml', text: 'Software', ref: '/about' },
-                    { icon: 'biohazard', text: 'Bioengineering' },
+                    { icon: 'biohazard', text: 'Bioengineering', ref: '/report' },
                     { icon: 'math-compass', text: 'Aplied Maths' },
                     { icon: 'robot', text: 'Robotics' },
                     { icon: 'cog', text: 'Operations' },
