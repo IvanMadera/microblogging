@@ -3,7 +3,6 @@
     <Navbar></Navbar>
     <Cabecera title="Muro"></Cabecera>
     <Publicacion></Publicacion>
-    
     <Muro></Muro>
   </div>
 </template>
