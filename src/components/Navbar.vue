@@ -24,7 +24,11 @@
                     </div>
                 </b-navbar-item>
                 <b-navbar-item align="left">
+<<<<<<< HEAD
                     <b-dropdown v-model="testNavigatio" position="is-bottom-left" aria-role="list" append-to-body>
+=======
+                    <b-dropdown v-model="navigation" append-to-body aria-role="menu">
+>>>>>>> master
                         <template #trigger>
                             <div class="buttons">
                                 <b-button type="is-light" icon-left="account-group" size="is-default">
@@ -34,7 +38,6 @@
                             </div>
                         </template>
                         <b-navbar-item
-                            append-to-body 
                             v-for="(menu, index) in menus"
                             :key="index"
                             :value="menu" aria-role="listitem" tag="router-link" :to="{path: menu.ref}">
