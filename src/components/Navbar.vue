@@ -24,7 +24,7 @@
                     </div>
                 </b-navbar-item>
                 <b-navbar-item align="left">
-                    <b-dropdown v-model="navigation" position="is-bottom-left" append-to-body aria-role="menu">
+                    <b-dropdown v-model="testNavigatio" position="is-bottom-left" aria-role="list" append-to-body>
                         <template #trigger>
                             <div class="buttons">
                                 <b-button type="is-light" icon-left="account-group" size="is-default">
@@ -83,6 +83,7 @@
                 navigation: 'home',
                 isScrollable: false,
                 maxHeight: 200,
+                testNavigation: {icon: 'account-group', text: 'Communities'},
                 menus: [
                     { icon: 'state-machine', text: 'Machine Learning', ref: '/' },
                     { icon: 'xml', text: 'Software', ref: '/about' },
