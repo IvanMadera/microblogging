@@ -1,10 +1,10 @@
 <template>
     <div class="container">
         <div class="card">
-            <b-field class="mlr-10" >
+            <b-field class="mt-4 mx-2" >
                 <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140"></b-input>
             </b-field>
-            <div class="buttons ml-10">
+            <div class="buttons ml-2">
                 <b-button type="is-success">Publicar</b-button>
                     <b-dropdown v-model="nameTag" aria-role="list" append-to-body>
                         <template #trigger>
@@ -46,12 +46,3 @@
         },
     }
 </script>
-
-<style scoped>
-    .mlr-10 {
-        margin: 30px 10px 0 10px;
-    }
-    .ml-10 {
-        margin-left: 10px;
-    }
-</style>

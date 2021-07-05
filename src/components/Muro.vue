@@ -1,13 +1,6 @@
 <template>
     <div class="container">
-        <br><div class="card">
-            <section class="hero is-primary">
-                <div class="hero-body">
-                    <p class="title">Muro</p>
-                    <p class="subtitle">¡Ve lo que piensan los demás!</p>
-                </div>
-            </section>
-        </div><br>
+        <br>
         <div class="card">
             <div class="card-header p-2">
                 <figure class="image is-48x48">
@@ -21,13 +14,21 @@
                 </span>
                 <b-dropdown v-model="Muro" class="is-align-items-center">
                     <template #trigger>
-                        <b-button type="is-light" :icon-left="Dots.icon"/>
+                        <b-button type="is-light" icon-left="dots-horizontal"/>
                     </template>
-                    <b-dropdown-item v-for="(opcion, index) in opciones" :key="index">
+                    <b-dropdown-item>
                         <div class="media">
-                            <b-icon class="media-left" :icon="opcion.icon"></b-icon>
+                            <b-icon class="media-left" icon="alert-octagon"></b-icon>
                                 <div class="media-content">
-                                    <h3>{{opcion.text}}</h3>
+                                    <h3>Reportar</h3>
+                                </div>
+                        </div>
+                    </b-dropdown-item>
+                    <b-dropdown-item>
+                        <div class="media">
+                            <b-icon class="media-left" icon="eye-off"></b-icon>
+                                <div class="media-content">
+                                    <h3>Ocultar</h3>
                                 </div>
                         </div>
                     </b-dropdown-item>
@@ -37,15 +38,17 @@
                 <div class="content">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
                 </div>
-                <hr class="dropdown-divider">
+            </div>
+            <hr class="dropdown-divider">
+            <div class="m-2 has-text-left">
                 <span class="tag is-success mr-1"><b-icon icon="thumb-up" size="is-small" /><p>150</p></span>
                 <span class="tag is-danger"><b-icon icon="thumb-down" size="is-small" /><p>150</p></span>
             </div>
             <footer class="card-footer is-justify-content-space-around">
-                    <b-button expanded class="is-success" :label="Like.text" type="is-light" :icon-left="Like.icon"/>
-                    <b-button expanded class="is-danger" :label="Dislike.text" type="is-light" :icon-left="Dislike.icon"/>
-                    <b-button expanded class="is-info" :label="Comment.text" type="is-light" :icon-left="Comment.icon"/>
-                    <b-button expanded class="is-link" :label="Share.text" type="is-light" :icon-left="Share.icon"/>      
+                    <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
+                    <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
+                    <b-button expanded class="is-info" label="Comment" type="is-light" icon-left="comment-multiple-outline"/>
+                    <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
             </footer>
         </div>
     </div>
@@ -56,15 +59,6 @@ export default {
     name: 'Murov2',
     data() {
         return {
-            Like: { icon: 'thumb-up-outline', text: 'Like'},
-            Dislike: { icon: 'thumb-down-outline', text: 'Dislike'},
-            Dots: { icon: 'dots-horizontal', text: 'Dislike'},
-            Share: { icon: 'share-all-outline', text: 'Share'},
-            Comment: { icon: 'comment-multiple-outline', text: 'Coment'},
-            opciones: [
-                {icon: 'alert-octagon', text: 'Reportar'},
-                {icon: 'eye-off', text: 'Ocultar'}
-            ]
         }
     },
 }
