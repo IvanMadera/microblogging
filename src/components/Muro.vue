@@ -51,6 +51,7 @@
                     <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
             </footer>
                 </div>
+                    <br>
                         <div class="media" v-show="showComment">
                             <figure class="media-left">
                                 <p class="image is-64x64">
@@ -60,7 +61,7 @@
                         <div class="media-content">
                         <div class="field">
                             <p class="control">
-                                <textarea class="textarea" placeholder="Escribe un comentario sobre la publicación."></textarea>
+                                <textarea has-counter class="textarea" placeholder="Escribe un comentario sobre la publicación." minlength="1" maxlength="140"></textarea>
                             </p>
                         </div>
                         <div class="field">
