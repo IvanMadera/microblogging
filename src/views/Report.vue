@@ -4,7 +4,7 @@
         <Cabecera title="Reportes"></Cabecera>
         <div class="container has-text-left">
             <b-table striped hoverable :data="data">
-                <b-table-column field="data.id" label="ID" v-slot="props">
+                <b-table-column field="id" label="ID" sortable v-slot="props">
                     {{props.row.id}}
                 </b-table-column>
                 <b-table-column field="data.f_name" label="Nombre" v-slot="props">
@@ -18,7 +18,7 @@
                         {{props.row.date}}
                     </span>
                 </b-table-column>
-                <b-table-column field="data.reports" label="Reportes" v-slot="props" centered>
+                <b-table-column field="reports" label="Reportes" v-slot="props" sortable centered>
                     <span class="tag is-warning">
                         {{props.row.reports}}
                     </span>
