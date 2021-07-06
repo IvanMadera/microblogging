@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" v-show="showPublication">
         <br>
         <div class="card">
             <div class="card-header p-2">
@@ -25,7 +25,7 @@
                         </div>
                     </b-dropdown-item>
                     <b-dropdown-item>
-                        <div class="media">
+                        <div class="media" @click="showPublication = !showPublication">
                             <b-icon class="media-left" icon="eye-off"></b-icon>
                                 <div class="media-content">
                                     <h3>Ocultar</h3>
@@ -47,9 +47,28 @@
             <footer class="card-footer is-justify-content-space-around">
                     <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
                     <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
-                    <b-button expanded class="is-info" label="Comment" type="is-light" icon-left="comment-multiple-outline"/>
+                    <b-button @click="showComment = !showComment" v-model="showComment" expanded class="is-info" label="Comment" type="is-light" icon-left="comment-multiple-outline"/>
                     <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
             </footer>
+                </div>
+                        <div class="media" v-show="showComment">
+                            <figure class="media-left">
+                                <p class="image is-64x64">
+                                <img src="https://bulma.io/images/placeholders/128x128.png">
+                                </p>
+                            </figure>
+                        <div class="media-content">
+                        <div class="field">
+                            <p class="control">
+                                <textarea class="textarea" placeholder="Escribe un comentario sobre la publicación."></textarea>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-success">Publicar</button>
+                            </p>
+                        </div>
+                </div>
         </div>
     </div>
 </template>
@@ -59,6 +78,8 @@ export default {
     name: 'Murov2',
     data() {
         return {
+            showComment: false,
+            showPublication: true
         }
     },
 }
