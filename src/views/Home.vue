@@ -14,7 +14,7 @@
 import Navbar from '@/components/Navbar.vue'
 import Cabecera from '@/components/Cabecera.vue'
 import Publicacion from '@/components/Publicacion.vue'
-import MuroCabecera from '@/components/MuroCabecera.vue';
+import MuroCabecera from '@/components/MuroCabecera.vue'
 import Muro from '@/components/Muro.vue'
 
 export default {
@@ -26,6 +26,5 @@ export default {
     MuroCabecera,
     Muro
   }
-
 }
 </script>
