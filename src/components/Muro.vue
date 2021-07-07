@@ -58,19 +58,19 @@
                                 <img src="https://bulma.io/images/placeholders/128x128.png">
                                 </p>
                             </figure>
-                        <div class="media-content">
-                        <div class="field">
-                            <p class="control">
-                                <textarea has-counter class="textarea" placeholder="Escribe un comentario sobre la publicación." minlength="1" maxlength="140"></textarea>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control">
-                                <button class="button is-success">Publicar</button>
-                            </p>
-                        </div>
+                            <div class="media-content">
+                                <div class="field">
+                                    <p class="control">
+                                        <textarea has-counter class="textarea" placeholder="Escribe un comentario sobre la publicación." minlength="1" maxlength="140"></textarea>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control">
+                                        <button class="button is-success">Publicar</button>
+                                    </p>
+                                </div>
+                            </div>
                 </div>
-        </div>
     </div>
 </template>
 
