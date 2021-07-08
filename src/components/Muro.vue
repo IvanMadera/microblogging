@@ -7,10 +7,9 @@
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
                 <p class="card-header-title">
-                    Ivan Madera Torres
+                    Ivan Gabriel Madera Torres
                 </p>
-                <span class="tag is-warning mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
-                <b-dropdown v-model="Muro" class="is-align-items-center">
+                <b-dropdown class="is-align-items-center">
                     <template #trigger>
                         <b-button type="is-light" icon-left="dots-horizontal"/>
                     </template>
@@ -35,6 +34,7 @@
             <div class="card-content has-text-left">
                 <div class="content">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
+                    <span class="tag is-warning mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
                 </div>
             </div>
             <hr class="dropdown-divider">

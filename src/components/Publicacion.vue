@@ -2,13 +2,13 @@
     <div class="container">
         <div class="card">
             <b-field class="mt-4 mx-2" >
-                <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140"></b-input>
+                <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140" v-model="texto"></b-input>
             </b-field>
             <div class="buttons ml-2">
-                <b-button type="is-success">Publicar</b-button>
+                <b-button type="is-success" @click="addPub">Publicar</b-button>
                 <b-dropdown v-model="nameTag" aria-role="list" append-to-body>
                     <template #trigger>
-                                <b-button :label="nameTag.text" type="is-primary" :icon-left="nameTag.icon" icon-right="menu-down" />
+                        <b-button :label="nameTag.text" type="is-primary" :icon-left="nameTag.icon" icon-right="menu-down"/>
                             <!-- <b-button type="is-light" icon-left="tag-multiple" size="is-default">
                                 <strong>Tags</strong>
                                 <b-icon icon="menu-down"></b-icon>
@@ -24,6 +24,9 @@
                         </div>
                     </b-dropdown-item>
                 </b-dropdown>
+            </div>
+            <div v-for="(print, index) of tareas" :key="index">
+                {{print.nombre}}
             </div>
         </div>
     </div>
@@ -45,8 +48,18 @@
                     { icon: 'alert-decagram', text: 'Spoiler', description: 'Publicaciones que contiene spoilers de un tema'},
                     { icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
                     { icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
-                ]
+                ],
+                texto: '',
+                tareas: []
             }
         },
+        methods: {
+            addPub() {
+                this.tareas.push({
+                    nombre: this.texto
+                });
+                this.texto = '';
+            }
+        }
     }
 </script>
