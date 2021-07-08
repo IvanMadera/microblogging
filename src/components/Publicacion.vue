@@ -40,7 +40,11 @@
                     { icon: 'head-question', text: 'Duda', description: 'Pregunta con respecto al post'},
                     { icon: 'boomerang', text: 'Offtopic', description: 'Tema fuera de los tags predeterminados'},
                     { icon: 'note-multiple', text: 'Trámites', description: 'Duda respecto a los trámites'},
-                    { icon: 'bookshelf', text: 'Materias', description: 'Publicaciones sobre materias de la carrera'}
+                    { icon: 'bookshelf', text: 'Materias', description: 'Publicaciones sobre materias de la carrera'},
+                    { icon: 'brain', text: 'Interesante', description: 'Publicaciones sobre cosas curiosas'},
+                    { icon: 'alert-decagram', text: 'Spoiler', description: 'Publicaciones que contiene spoilers de un tema'},
+                    { icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
+                    { icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a temas relacionados a la carrera'}
                 ]
             }
         },

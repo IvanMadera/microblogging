@@ -44,15 +44,15 @@
                     <span class="tag is-danger"><b-icon icon="thumb-down" size="is-small" /><p>150</p></span>
                 </div>
                 <div>
-                    <b-dropdown v-model="nameTag" aria-role="list" append-to-body>
+                    <b-dropdown v-model="nameGift" aria-role="list" append-to-body>
                         <template #trigger>
-                            <b-button class="is-small" type="is-blue" :label="nameTag.text" :icon-right="nameTag.icon"/>
+                            <b-button class="is-small" type="is-blue" :label="nameGift.text" :icon-right="nameGift.icon"/>
                         </template>
-                        <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta" aria-role="listitem">
+                        <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift" aria-role="listitem">
                         <div class="media">
-                            <b-icon class="media-left" :icon="etiqueta.icon"></b-icon>
+                            <b-icon class="media-left" :icon="gift.icon"></b-icon>
                             <div class="media-content">
-                                <h3>{{etiqueta.text}}</h3>
+                                <h3>{{gift.text}}</h3>
                             </div>
                         </div>
                     </b-dropdown-item>
@@ -63,11 +63,9 @@
             <footer class="card-footer">
                     <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
                     <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
-<<<<<<< HEAD
-                    <b-button @click="showComment = !showComment" v-model="showComment" expanded class="is-info" label="Comment" type="is-light" icon-left="comment-multiple-outline"/>
-=======
-                    <b-button expanded class="is-info" label="Discuss" type="is-light" icon-left="comment-multiple-outline"/>
->>>>>>> master
+
+                    <b-button @click="showComment = !showComment" v-model="showComment" expanded class="is-info" label="Discuss" type="is-light" icon-left="comment-multiple-outline"/>
+
                     <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
             </footer>
                 </div>
@@ -106,12 +104,10 @@ export default {
     name: 'Muro',
     data() {
         return {
-<<<<<<< HEAD
             showComment: false,
-            showPublication: true
-=======
-            nameTag: { icon: 'gift', text: 'Premios'},
-            etiquetas:[
+            showPublication: true,
+            nameGift: { icon: 'gift', text: 'Premios'},
+            gifts:[
                 { icon: 'hexagon-outline', text: '20 Exp'},
                 { icon: 'hexagon-slice-1', text: '50 Exp'},
                 { icon: 'hexagon-slice-2', text: '100 Exp'},
@@ -120,7 +116,6 @@ export default {
                 { icon: 'hexagon-slice-5', text: '1000 Exp'},
                 { icon: 'hexagon-slice-6', text: '5000 Exp'}
             ]
->>>>>>> master
         }
     }
 }
