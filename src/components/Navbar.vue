@@ -23,14 +23,17 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
-                <b-navbar-item align="left">
-                    <b-dropdown v-model="navigation" append-to-body aria-role="menu">
-                        <template #trigger>
+                <b-navbar-item class="has-text-left">
+                    <b-dropdown aria-role="list">
+                        <template #trigger="{ active }">
                             <div class="buttons">
-                                <b-button type="is-light" icon-left="account-group" size="is-default">
-                                    <strong>Communities</strong>
-                                    <b-icon icon="menu-down"></b-icon>
-                                </b-button>
+                                <b-button
+                                class="has-text-weight-bold"
+                                type="is-light"
+                                size="is-default"
+                                icon-left="account-group"
+                                label="Comunidades"
+                                :icon-right="active ? 'menu-up' : 'menu-down'" />
                             </div>
                         </template>
                         <b-navbar-item
@@ -83,15 +86,17 @@
                 isScrollable: false,
                 maxHeight: 200,
                 menus: [
-                    { icon: 'state-machine', text: 'Machine Learning', ref: '/' },
-                    { icon: 'xml', text: 'Software', ref: '/about' },
-                    { icon: 'biohazard', text: 'Bioengineering', ref: '/report' },
-                    { icon: 'math-compass', text: 'Aplied Maths' },
-                    { icon: 'robot', text: 'Robotics' },
-                    { icon: 'cog', text: 'Operations' },
-                    { icon: 'security', text: 'Cibersecurity' },
-                    { icon: 'microsoft-visual-studio-code', text: 'Wolfcode' },
-                    { icon: 'google-controller', text: 'Games' }
+                    { icon: 'face-recognition', text: 'Anime', ref: '/' },
+                    { icon: 'poker-chip', text: 'Gaming', ref: '/about' },
+                    { icon: 'laptop', text: 'Tecnología', ref: '/report' },
+                    { icon: 'xml', text: 'Programación' },
+                    { icon: 'state-machine', text: 'Inteligencia Artificial' },
+                    { icon: 'trophy-variant', text: 'Deportes' },
+                    { icon: 'security', text: 'Ciberseguridad' },
+                    { icon: 'monitor-edit', text: 'Software & Hardware' },
+                    { icon: 'memory', text: 'Electronica' },
+                    { icon: 'music', text: 'Música' },
+                    { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico' },
                 ],
                 data: [
                     'Angular',

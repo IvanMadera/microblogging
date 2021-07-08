@@ -9,7 +9,7 @@
                 <p class="card-header-title">
                     Ivan Madera Torres
                 </p>
-                <span class="tag is-warning mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Ayuda</p></span>
+                <span class="tag is-warning mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
                 <b-dropdown v-model="Muro" class="is-align-items-center">
                     <template #trigger>
                         <b-button type="is-light" icon-left="dots-horizontal"/>
@@ -46,7 +46,7 @@
                 <div>
                     <b-dropdown v-model="nameGift" aria-role="list" append-to-body>
                         <template #trigger>
-                            <b-button class="is-small" type="is-blue" :label="nameGift.text" :icon-right="nameGift.icon"/>
+                            <b-button class="is-small" type="is-gold" :label="nameGift.text" :icon-right="nameGift.icon"/>
                         </template>
                         <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift" aria-role="listitem">
                         <div class="media">
@@ -63,37 +63,32 @@
             <footer class="card-footer">
                     <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
                     <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
-
                     <b-button @click="showComment = !showComment" v-model="showComment" expanded class="is-info" label="Discuss" type="is-light" icon-left="comment-multiple-outline"/>
-
                     <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
             </footer>
+        </div><br>
+        <div class="media m-2" v-show="showComment">
+            <figure class="media-left image is-64x64">
+                <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+            </figure>
+            <div class="media-content">
+                <div class="field">
+                    <p class="control">
+                        <b-input type="textarea" placeholder="Escribe un comentario" minlength="1" maxlength="140"></b-input>
+                    </p>
                 </div>
-                    <br>
-                        <div class="media" v-show="showComment">
-                            <figure class="media-left">
-                                <p class="image is-64x64">
-                                <img src="https://bulma.io/images/placeholders/128x128.png">
-                                </p>
-                            </figure>
-                            <div class="media-content">
-                                <div class="field">
-                                    <p class="control">
-                                        <textarea has-counter class="textarea" placeholder="Escribe un comentario sobre la publicación." minlength="1" maxlength="140"></textarea>
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control">
-                                        <button class="button is-success">Publicar</button>
-                                    </p>
-                                </div>
-                            </div>
+                <div class="field">
+                    <p class="control has-text-right">
+                        <button class="button is-success">Comentar</button>
+                    </p>
                 </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <style scoped>
-    .is-blue {
+    .is-gold {
         background-color: #ffa500;
         color: whitesmoke;
     }
