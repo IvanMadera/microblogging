@@ -65,15 +65,47 @@
                         <template #empty>No results found</template>
                     </b-autocomplete>
                 </b-navbar-item>
-                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <b-navbar-item>
                     <div class="buttons">
-                        <b-button type="is-success" icon-left="account-circle" size="is-default">
+                        <b-button type="is-success" icon-left="account-circle" size="is-default" @click="isCardModalActive = true, isImageModalActive = true">
                             <strong>Profile</strong>
                         </b-button>
                     </div>
                 </b-navbar-item>
             </template>
         </b-navbar>
+            <b-modal v-model="isImageModalActive">
+                <div class="card">
+                    <div class="modal-card" style="width: auto">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Perfil</p>
+                            <button
+                            type="button"
+                            class="delete"
+                            @click="$emit('close')"/>
+                        </header>
+                    </div>
+                    <p class="image">
+                        <img src="@/assets/ZeroTwoWindowsTerminal.png" width="900" height="600">
+                    </p>
+                        <div class="media-content">
+                                <p class="title is-4">Zero Two</p>
+                                <p class="subtitle is-6">002</p>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.
+                            <br>
+                            <a>Octavo Semestre</a>
+                            <br>
+                            <a>Ingeniería en Sistemas Computacionales</a>
+                            <br>
+                            <a>Tecnologías e Innovación</a>
+                            <br>
+                        </div>
+                        <footer>1200 XP</footer>
+                </div>
+            </b-modal>
     </div>
 </template>
 
@@ -85,6 +117,8 @@
                 navigation: 'home',
                 isScrollable: false,
                 maxHeight: 200,
+                isCardModalActive: false,
+                isImageModalActive: false,
                 menus: [
                     { icon: 'face-recognition', text: 'Anime', ref: '/' },
                     { icon: 'poker-chip', text: 'Gaming', ref: '/about' },
@@ -127,4 +161,5 @@
             }
         }
     }
+
 </script>
