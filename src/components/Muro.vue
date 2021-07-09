@@ -68,20 +68,16 @@
             </footer>
         </div><br>
         <div class="media m-2" v-show="showComment">
-            <figure class="media-left image is-64x64">
+            <figure class="media-left image is-48x48">
                 <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
             </figure>
             <div class="media-content">
-                <div class="field">
+                <b-field class="mt-1">
+                    <b-input  class="is-flex is-flex-wrap-wrap" expanded placeholder="Escribe un comentario" maxlength="140"></b-input>
                     <p class="control">
-                        <b-input type="textarea" placeholder="Escribe un comentario" minlength="1" maxlength="140"></b-input>
+                        <b-button class="button is-success" icon-right="send"></b-button>
                     </p>
-                </div>
-                <div class="field">
-                    <p class="control has-text-right">
-                        <button class="button is-success">Comentar</button>
-                    </p>
-                </div>
+                </b-field>
             </div>
         </div>
     </div>
