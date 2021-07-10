@@ -88,10 +88,12 @@
                     <p class="image">
                         <img src="@/assets/ZeroTwoWindowsTerminal.png" width="900" height="600">
                     </p>
+                    <br>
                         <div class="media-content">
-                                <p class="title is-4">Zero Two</p>
-                                <p class="subtitle is-6">002</p>
+                                <b-tag type="is-dark" size="is-large">Carlos Iván Moo Barrera</b-tag>
+                                <b-tag type="is-info" size="is-large">E17081431</b-tag>
                         </div>
+                    <br>
                         <div class="content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Phasellus nec iaculis mauris.
@@ -103,7 +105,8 @@
                             <a>Tecnologías e Innovación</a>
                             <br>
                         </div>
-                        <footer>1200 XP</footer>
+                        <footer><b-tag type="is-success is-light" size="is-large">1200 XP</b-tag></footer>
+                        <br>
                 </div>
             </b-modal>
     </div>
