@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <Bienvenida title="Gaming" icono="poker-chip" bg="is-info"
+        <Bienvenida title="Gaming" icono="poker-chip"
         subtitle="Comunidad dedicada a los jugadores y amantes de los juegos electrónicos en diferentes
         de sus plataformas, como consolas X-Box, Playstation, Nintendo, plataformas móviles como celulares
         o simplemente en computadoras personales con rgb para más fps."></Bienvenida>
