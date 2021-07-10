@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <Bienvenida title="Programación" icono="xml" bg="is-info"
+        <Bienvenida title="Programación" icono="xml"
         subtitle="Comunidad dedicada a los seguidores del arte de crear procesos utilizados para idear y
         ordenar acciones necesarias para la realicación de proyectos, preparación de máquinas o aparatos
         para su correcto funcionamineto en la forma deseada o elaboración de programas para su empleo en

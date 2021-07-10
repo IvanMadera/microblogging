@@ -65,12 +65,13 @@
                         <template #empty>No results found</template>
                     </b-autocomplete>
                 </b-navbar-item>
-                <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                    <div class="buttons">
-                        <b-button type="is-success" icon-left="account-circle" size="is-default">
-                            <strong>Profile</strong>
-                        </b-button>
-                    </div>
+                <b-navbar-item class="has-text-left">
+                    <b-button
+                    class="has-text-weight-bold"
+                    type="is-success"
+                    icon-left="account-circle"
+                    label="Perfil"
+                    size="is-default"/>
                 </b-navbar-item>
             </template>
         </b-navbar>
@@ -112,8 +113,7 @@
                     'RxJS',
                     'Vue.js'
                 ],
-                name: '',
-                selected: null
+                name: ''
             }
         },
         computed: {
