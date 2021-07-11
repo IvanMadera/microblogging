@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar></Navbar>
         <Bienvenida title="Deportes" icono="trophy-variant"
         subtitle="Comunidad dedicada a los seguidores de aquella actividad física que involucra una serie
         de reglas o normas a desempeñar dentro de un espacio o área determinada, como lo pueden ser un campo

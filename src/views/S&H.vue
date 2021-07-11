@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar></Navbar>
         <Bienvenida title="Software & Hardware" icono="monitor-edit"
         subtitle="Comunidad dedicada a los seguidores de los componentes fisicos y tangibles que forman
         parte de una computadora como la CPU o la placa base, y del equipamento lógico e intangible como

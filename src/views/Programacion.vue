@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar></Navbar>
         <Bienvenida title="Programación" icono="xml"
         subtitle="Comunidad dedicada a los seguidores del arte de crear procesos utilizados para idear y
         ordenar acciones necesarias para la realicación de proyectos, preparación de máquinas o aparatos
