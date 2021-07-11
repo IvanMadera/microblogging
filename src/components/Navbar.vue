@@ -67,48 +67,46 @@
                 </b-navbar-item>
                 <b-navbar-item>
                     <div class="buttons">
-                        <b-button type="is-success" icon-left="account-circle" size="is-default" @click="isCardModalActive = true, isImageModalActive = true">
-                            <strong>Profile</strong>
-                        </b-button>
+                        <b-button
+                        class="has-text-weight-bold"
+                        type="is-success"
+                        icon-left="account-circle"
+                        label="Perfil"
+                        size="is-default"
+                        @click="isCardModalActive = true"/>
                     </div>
                 </b-navbar-item>
             </template>
         </b-navbar>
-            <b-modal v-model="isImageModalActive">
-                <div class="card">
-                    <div class="modal-card" style="width: auto">
-                        <header class="modal-card-head">
-                            <p class="modal-card-title">Perfil</p>
-                            <button
-                            type="button"
-                            class="delete"
-                            @click="$emit('close')"/>
-                        </header>
-                    </div>
-                    <p class="image">
-                        <img src="@/assets/ZeroTwoWindowsTerminal.png" width="900" height="600">
-                    </p>
-                    <br>
-                        <div class="media-content">
-                                <b-tag type="is-dark" size="is-large">Carlos Iván Moo Barrera</b-tag>
-                                <b-tag type="is-info" size="is-large">E17081431</b-tag>
-                        </div>
-                    <br>
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus nec iaculis mauris.
-                            <br>
-                            <a>Octavo Semestre</a>
-                            <br>
-                            <a>Ingeniería en Sistemas Computacionales</a>
-                            <br>
-                            <a>Tecnologías e Innovación</a>
-                            <br>
-                        </div>
-                        <footer><b-tag type="is-success is-light" size="is-large">1200 XP</b-tag></footer>
-                        <br>
+        <b-modal v-model="isCardModalActive">
+            <div class="card">
+                <div class="modal-card" style="width: auto;" scroll="keep">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Perfil</p>
+                    </header>
                 </div>
-            </b-modal>
+                <figure class="image is-4by3">
+                    <img src="@/assets/ZeroTwoWindowsTerminal.png" alt="Perfil">
+                </figure><br>
+                <div class="media-content mb-1">
+                    <b-tag class="m-1" type="is-dark" size="is-medium">Carlos Iván Moo Barrera</b-tag>
+                    <b-tag class="m-1" type="is-info" size="is-medium">E17081431</b-tag>
+                </div>
+                <div class="content m-1">
+                    <div> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                    </div>
+                    <div class="has-text-primary m-1">
+                        <div><b-icon class="mr-1" icon="email-outline" size="is-small"/>LE17081431@merida.tecnm.mx</div>
+                        <div><b-icon class="mr-1" icon="school-outline" size="is-small"/>Ingenieria en Sistemas Computacionales</div>
+                        <div><b-icon class="mr-1" icon="book-account-outline" size="is-small"/>Noveno ingreso</div>
+                        <div><b-icon class="mr-1" icon="arrange-send-backward" size="is-small"/>Tecnologías e Innovación</div>
+                    </div>
+                </div>
+                <footer><b-tag class="mt-1 mb-2" type="is-success" size="is-medium">1200 XP</b-tag></footer>
+            </div>
+        </b-modal>
     </div>
 </template>
 
@@ -121,7 +119,6 @@
                 isScrollable: false,
                 maxHeight: 200,
                 isCardModalActive: false,
-                isImageModalActive: false,
                 menus: [
                     { icon: 'face-recognition', text: 'Anime', ref: '/anime' },
                     { icon: 'poker-chip', text: 'Gaming', ref: '/gaming' },
