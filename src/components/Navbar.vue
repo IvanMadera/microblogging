@@ -65,22 +65,12 @@
                         <template #empty>No results found</template>
                     </b-autocomplete>
                 </b-navbar-item>
-<<<<<<< HEAD
                 <b-navbar-item>
                     <div class="buttons">
                         <b-button type="is-success" icon-left="account-circle" size="is-default" @click="isCardModalActive = true, isImageModalActive = true">
                             <strong>Profile</strong>
                         </b-button>
                     </div>
-=======
-                <b-navbar-item class="has-text-left">
-                    <b-button
-                    class="has-text-weight-bold"
-                    type="is-success"
-                    icon-left="account-circle"
-                    label="Perfil"
-                    size="is-default"/>
->>>>>>> master
                 </b-navbar-item>
             </template>
         </b-navbar>
