@@ -65,16 +65,50 @@
                         <template #empty>No results found</template>
                     </b-autocomplete>
                 </b-navbar-item>
-                <b-navbar-item class="has-text-left">
-                    <b-button
-                    class="has-text-weight-bold"
-                    type="is-success"
-                    icon-left="account-circle"
-                    label="Perfil"
-                    size="is-default"/>
+                <b-navbar-item>
+                    <div class="buttons">
+                        <b-button type="is-success" icon-left="account-circle" size="is-default" @click="isCardModalActive = true, isImageModalActive = true">
+                            <strong>Profile</strong>
+                        </b-button>
+                    </div>
                 </b-navbar-item>
             </template>
         </b-navbar>
+            <b-modal v-model="isImageModalActive">
+                <div class="card">
+                    <div class="modal-card" style="width: auto">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">Perfil</p>
+                            <button
+                            type="button"
+                            class="delete"
+                            @click="$emit('close')"/>
+                        </header>
+                    </div>
+                    <p class="image">
+                        <img src="@/assets/ZeroTwoWindowsTerminal.png" width="900" height="600">
+                    </p>
+                    <br>
+                        <div class="media-content">
+                                <b-tag type="is-dark" size="is-large">Carlos Iván Moo Barrera</b-tag>
+                                <b-tag type="is-info" size="is-large">E17081431</b-tag>
+                        </div>
+                    <br>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.
+                            <br>
+                            <a>Octavo Semestre</a>
+                            <br>
+                            <a>Ingeniería en Sistemas Computacionales</a>
+                            <br>
+                            <a>Tecnologías e Innovación</a>
+                            <br>
+                        </div>
+                        <footer><b-tag type="is-success is-light" size="is-large">1200 XP</b-tag></footer>
+                        <br>
+                </div>
+            </b-modal>
     </div>
 </template>
 
@@ -86,6 +120,8 @@
                 navigation: 'home',
                 isScrollable: false,
                 maxHeight: 200,
+                isCardModalActive: false,
+                isImageModalActive: false,
                 menus: [
                     { icon: 'face-recognition', text: 'Anime', ref: '/anime' },
                     { icon: 'poker-chip', text: 'Gaming', ref: '/gaming' },
@@ -127,4 +163,5 @@
             }
         }
     }
+
 </script>
