@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Navbar></Navbar>
         <Bienvenida title="Electrónica" icono="memory"
         subtitle="Comunidad dedicada a los seguidores de la rama de la física que comprende todo lo
         relacionado con la ingeniería, física, tecnología y aplicaciones que traten la emisión, el flujo
