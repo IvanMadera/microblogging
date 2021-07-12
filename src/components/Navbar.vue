@@ -65,6 +65,7 @@
                         <template #empty>No results found</template>
                     </b-autocomplete>
                 </b-navbar-item>
+<<<<<<< HEAD
                 <b-navbar-item class="has-text-left">
                     <b-button
                     class="has-text-weight-bold"
@@ -73,6 +74,14 @@
                     label="Perfil"
                     size="is-default"
                     @click="isCardModalActive = true, isImageModalActive = true"/>
+=======
+                <b-navbar-item>
+                    <div class="buttons">
+                        <b-button type="is-success" icon-left="account-circle" size="is-default" @click="isCardModalActive = true, isImageModalActive = true">
+                            <strong>Profile</strong>
+                        </b-button>
+                    </div>
+>>>>>>> 99a7fdc57d35c9b965f89378609600d254e27768
                 </b-navbar-item>
             </template>
         </b-navbar>
