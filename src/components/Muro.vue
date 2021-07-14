@@ -68,6 +68,12 @@
             </footer>
         </div>
         <div class="card p-2" v-show="showComment">
+             <b-button
+                    v-model="showMostrar"
+                    type="is-text"
+                    v-show="showMostrar"
+                    @click="showMostrar = !showMostrar, showSubComment = !showSubComment">Mostrar los comentarios de la publicación</b-button>
+            <div v-show="showSubComment">
             <div class="media has-background-white-ter p-1 borde">
                 <div class="media-left">
                     <figure class="image is-48x48">
@@ -100,6 +106,7 @@
                     <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
                     <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
                 </div>
+            </div>
             </div>
             <div class="is-flex is-flex-direction-row">
                 <figure class="media-left image is-48x48">
@@ -134,6 +141,8 @@ export default {
         return {
             showComment: false,
             showPublication: true,
+            showMostrar: true,
+            showSubComment: false,
             nameGift: { icon: 'gift', text: 'Premios'},
             gifts:[
                 { icon: 'hexagon-outline', text: '20 Exp'},
