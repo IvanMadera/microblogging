@@ -1,7 +1,7 @@
 <template>
   <div class="about">
-    <Navbar class="absolute"></Navbar>
-    <Bienvenida title="Software" subtitle="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto eligendi eos accusamus suscipit deleniti explicabo pariatur id, iure ratione aspernatur impedit sequi nisi esse eius officia consectetur laboriosam dolor incidunt repudiandae aperiam tempore maiores. Vitae quasi repudiandae aperiam recusandae excepturi odit, iure accusantium aliquid libero molestiae ut nobis, reprehenderit nihil!"></Bienvenida>
+    <NavAdmin></NavAdmin>
+    <div class="title">Ruta de pruebas</div>
   </div>
 </template>
 
@@ -13,13 +13,13 @@
 </style>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+import NavAdmin from '@/components/NavAdmin.vue'
 import Bienvenida from '@/components/Bienvenida.vue'
 
 export default {
   name: 'About',
   components: {
-    Navbar,
+    NavAdmin,
     Bienvenida
   }
 }

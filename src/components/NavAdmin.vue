@@ -16,6 +16,13 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/report' }">
+                    <div class="buttons">
+                        <b-button type="is-light" icon-left="flag" size="is-default">
+                            <strong>Reportes</strong>
+                        </b-button>
+                    </div>
+                </b-navbar-item>
                 <b-navbar-item class="has-text-left">
                     <b-dropdown aria-role="list">
                         <template #trigger="{ active }">

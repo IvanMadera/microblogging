@@ -46,7 +46,7 @@
                 <div>
                     <b-dropdown v-model="nameGift" aria-role="list" append-to-body>
                         <template #trigger>
-                            <b-button class="is-small" type="is-success is-gold" :label="nameGift.text" :icon-right="nameGift.icon"/>
+                            <b-button class="is-small" type="is-light is-gold" :label="nameGift.text" :icon-right="nameGift.icon"/>
                         </template>
                         <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift" aria-role="listitem">
                         <div class="media">
@@ -61,10 +61,10 @@
             </div>
             
             <footer class="card-footer">
-                    <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
-                    <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
-                    <b-button @click="showComment = !showComment" v-model="showComment" expanded class="is-info" label="Discuss" type="is-light" icon-left="comment-multiple-outline"/>
-                    <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
+                <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
+                <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
+                <b-button expanded class="is-info" label="Discuss" type="is-light" @click="showComment = !showComment" v-model="showComment" icon-left="comment-multiple-outline"/>
+                <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
             </footer>
         </div>
         <div class="card p-2" v-show="showComment">
@@ -72,43 +72,43 @@
                     v-model="showMostrar"
                     type="is-text"
                     v-show="showMostrar"
-                    @click="showMostrar = !showMostrar, showSubComment = !showSubComment">Mostrar los comentarios de la publicación</b-button>
+                    @click="showMostrar = !showMostrar, showSubComment = !showSubComment">Mostrar los comentarios</b-button>
             <div v-show="showSubComment">
-            <div class="media has-background-white-ter p-1 borde">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
-                    </figure>
+                <div class="media has-background-white-ter p-1 borde">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content has-text-left">
+                        <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
+                        <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
+                    </div>
                 </div>
-                <div class="media-content has-text-left">
-                    <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
-                    <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
+                <div class="media has-background-white-ter p-1 borde">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content has-text-left">
+                        <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
+                        <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
+                    </div>
+                </div>
+                <div class="media has-background-white-ter p-1 borde">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content has-text-left">
+                        <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
+                        <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
+                    </div>
                 </div>
             </div>
-            <div class="media has-background-white-ter p-1 borde">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
-                    </figure>
-                </div>
-                <div class="media-content has-text-left">
-                    <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
-                    <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
-                </div>
-            </div>
-            <div class="media has-background-white-ter p-1 borde">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
-                    </figure>
-                </div>
-                <div class="media-content has-text-left">
-                    <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
-                    <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
-                </div>
-            </div>
-            </div>
-            <div class="is-flex is-flex-direction-row">
+            <div class="mt-3 is-flex is-flex-direction-row p-1">
                 <figure class="media-left image is-48x48">
                     <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
                 </figure>
@@ -126,8 +126,9 @@
 </template>
 
 <style scoped>
-    .is-gold {
-        background-color: #ffa500 !important;
+    .is-gold, .is-gold:hover {
+        background-color: #ffa500;
+        color: white !important;
     }
     .borde {
         border-radius: 15px;
