@@ -61,10 +61,10 @@
             </div>
             
             <footer class="card-footer">
-                <b-button expanded class="is-success" label="Like" type="is-light" icon-left="thumb-up-outline"/>
-                <b-button expanded class="is-danger" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
-                <b-button expanded class="is-info" label="Discuss" type="is-light" @click="showComment = !showComment" v-model="showComment" icon-left="comment-multiple-outline"/>
-                <b-button expanded class="is-link" label="Share" type="is-light" icon-left="share-all-outline"/>      
+                <b-button expanded class="is-green" label="Like" type="is-light" icon-left="thumb-up-outline"/>
+                <b-button expanded class="is-red" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
+                <b-button expanded class="is-blue" label="Discuss" type="is-light" @click="showComment = !showComment" v-model="showComment" icon-left="comment-multiple-outline"/>
+                <b-button expanded class="is-purple" label="Share" type="is-light" icon-left="share-all-outline"/> 
             </footer>
         </div>
         <div class="card p-2" v-show="showComment">
@@ -126,9 +126,56 @@
 </template>
 
 <style scoped>
-    .is-gold, .is-gold:hover {
+    .is-gold{
         background-color: #ffa500;
         color: white !important;
+    }
+    .is-gold:hover{
+        background-color: #ffbf00;
+    }
+    .is-green {
+        border-radius: 0;
+        background-color: #effaf5 ;
+        color: #257953 !important;
+    }
+    .is-green:hover {
+        background-color: #e6f7ef;
+    }
+    .is-green:active {
+        background-color: #dcf4e9;
+    }
+    .is-red {
+        border-radius: 0;
+        background-color: #feecf0 ;
+        color: #cc0f35 !important;
+    }
+    .is-red:hover {
+        background-color: #fde0e6;
+    }
+    .is-red:active {
+        background-color: #fcd4dc;
+    }
+    .is-blue {
+        border-radius: 0;
+        background-color: #ecf4fe;
+        color: #0d68ce !important;
+    }
+    .is-blue:hover {
+        background-color: #dae9f6;
+    }
+    .is-blue:active {
+        background-color: #d4e7fc;
+    }
+    .is-purple {
+        border-radius: 0;
+        background-color: #f2effb;
+        color: #552fbc !important;
+    }
+    .is-purple:hover {
+        background-color: #eae4f8;
+    }
+    .is-purple:active {
+        background-color: #e2daf6;
     }
     .borde {
         border-radius: 15px;
