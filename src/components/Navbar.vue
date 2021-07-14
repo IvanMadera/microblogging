@@ -64,14 +64,6 @@
                         <template #empty>No results found</template>
                     </b-autocomplete>
                 </b-navbar-item>
-                <b-navbar-item class="has-text-left">
-                    <b-button
-                    class="has-text-weight-bold"
-                    type="is-success"
-                    icon-left="account-circle"
-                    label="Perfil"
-                    size="is-default"
-                    @click="isCardModalActive = true, isImageModalActive = true"/>
                 <b-navbar-item>
                     <div class="buttons">
                         <b-button
@@ -85,12 +77,6 @@
                 </b-navbar-item>
             </template>
         </b-navbar>
-            <b-modal v-model="isImageModalActive">
-                <div class="card">
-                    <div class="modal-card" style="width: auto">
-                        <header class="modal-card-head">
-                            <p class="modal-card-title">Perfil</p>
-                        </header>
         <b-modal v-model="isCardModalActive">
             <div class="card">
                 <div class="modal-card" style="width: auto;" scroll="keep">
@@ -173,5 +159,4 @@
             }
         }
     }
-
 </script>
