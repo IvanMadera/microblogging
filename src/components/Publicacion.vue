@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card">
             <b-field class="mt-4 mx-2" >
-                <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140" v-model="texto"></b-input>
+                <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140" v-model="pub"></b-input>
             </b-field>
             <div class="buttons ml-2">
                 <b-button type="is-success" @click="addPub">Publicar</b-button>
@@ -25,14 +25,13 @@
                     </b-dropdown-item>
                 </b-dropdown>
             </div>
-            <div v-for="(print, index) of tareas" :key="index">
-                {{print.nombre}}
-            </div>
         </div>
     </div>
 </template>
 
 <script>
+    import {mapState} from 'vuex';
+
     export default {
         name: 'Publicacion',
         data() {
@@ -49,16 +48,21 @@
                     { icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
                     { icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
                 ],
-                texto: '',
-                tareas: []
+                pub: '',
+                icono: '',
+                tag: ''
             }
+        },
+        computed: {
+            ...mapState(['tareas'])
         },
         methods: {
             addPub() {
                 this.tareas.push({
-                    nombre: this.texto
+                    pub: this.pub,
+                    tag: this.tag
                 });
-                this.texto = '';
+                this.pub = '';
             }
         }
     }

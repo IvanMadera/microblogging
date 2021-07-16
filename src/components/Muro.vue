@@ -1,7 +1,7 @@
 <template>
     <div class="container" v-show="showPublication">
         <br>
-        <div class="card pb-2">
+        <div class="card pb-2" v-for="(item, index) in tareas" :key="index">
             <div class="card-header p-2">
                 <figure class="image is-48x48">
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
@@ -33,7 +33,7 @@
             </div>
             <div class="card-content has-text-left">
                 <div class="content">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
+                    {{item.pub}}-{{item.tag}}
                     <span class="tag is-warning mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
                 </div>
             </div>
@@ -183,6 +183,8 @@
 </style>
 
 <script>
+import {mapState} from 'vuex';
+
 export default {
     name: 'Muro',
     data() {
@@ -202,6 +204,9 @@ export default {
                 { icon: 'hexagon-slice-6', text: '5000 Exp'}
             ]
         }
+    },
+    computed: {
+        ...mapState(['tareas'])
     }
 }
 </script>

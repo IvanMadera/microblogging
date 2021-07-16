@@ -5,7 +5,6 @@
     <Publicacion></Publicacion>
     <MuroCabecera></MuroCabecera>
     <Muro></Muro>
-    <Muro></Muro>
   </div>
 </template>
 
