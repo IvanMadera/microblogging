@@ -1,7 +1,7 @@
 <template>
     <div class="container has-text-left">
         <div class="is-size-5 title m-10">
-            <b-icon icon="home"/> > {{ title }}
+            <span><b-icon icon="home"/> > {{ title }}</span>
         </div>
     </div>
 </template>

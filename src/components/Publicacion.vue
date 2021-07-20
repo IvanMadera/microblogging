@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <div class="card">
             <b-field class="mt-4 mx-2" >
                 <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140" v-model="pub"></b-input>
@@ -48,9 +48,7 @@
                     {id: '8', icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
                     {id: '9', icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
                 ],
-                pub: '',
-                icono: '',
-                tag: ''
+                pub: ''
             }
         },
         computed: {
@@ -59,8 +57,7 @@
         methods: {
             addPub() {
                 this.tareas.push({
-                    pub: this.pub,
-                    tag: this.tag
+                    pub: this.pub
                 });
                 this.pub = '';
             }

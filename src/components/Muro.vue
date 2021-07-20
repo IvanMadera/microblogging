@@ -1,6 +1,5 @@
 <template>
-    <div class="container" v-show="showPublication">
-        <br>
+    <div v-show="showPublication">
         <div class="card pb-2" v-for="(item, index) in tareas" :key="index">
             <div class="card-header p-2">
                 <figure class="image is-48x48">
