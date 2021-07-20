@@ -4,7 +4,6 @@
     <div class="container">
       <Cabecera title="Prueba"/>
       <PubInput/>
-      <Publicacion/>
       <div class="columns mt-2 is-desktop">
         <div class="column is-3 is-hidden-touch">
           <CommunitiesNav/>
