@@ -48,9 +48,7 @@
                     { icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
                     { icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
                 ],
-                pub: '',
-                icono: '',
-                tag: ''
+                pub: ''
             }
         },
         computed: {
@@ -59,8 +57,7 @@
         methods: {
             addPub() {
                 this.tareas.push({
-                    pub: this.pub,
-                    tag: this.tag
+                    pub: this.pub
                 });
                 this.pub = '';
             }

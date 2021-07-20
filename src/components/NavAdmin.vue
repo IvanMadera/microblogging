@@ -23,7 +23,7 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
-                <b-navbar-item class="has-text-left is-hidden-fullhd is-hidden-widescreen">
+                <b-navbar-item class="has-text-left is-hidden-desktop">
                     <b-dropdown aria-role="list">
                         <template #trigger="{ active }">
                             <div class="buttons">
