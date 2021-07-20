@@ -2,7 +2,7 @@
   <div>
     <NavAdmin/>
     <div class="container">
-      <Cabecera title="Prueba"/>
+      <Cabecera title="Home"/>
       <PubInput/>
       <div class="columns mt-2 is-desktop">
         <div class="column is-3 is-hidden-touch">
@@ -10,7 +10,7 @@
         </div>
         <div class="column is-9">
           <div class="mb-2">
-            <MuroCabecera/>
+            <MuroCabecera icono="face-recognition" community="Anime"/>
           </div>
           <Muro/>
         </div>

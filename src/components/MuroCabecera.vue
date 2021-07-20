@@ -3,12 +3,18 @@
         <div class="card">
             <section class="hero is-primary back">
                 <div class="hero-body">
-                    <p class="title">Muro</p>
-                    <p class="subtitle">¡Ve lo que piensan los demás!</p>
-                    <div class="buttons mt-5 is-centered">
-                        <b-button rounded inverted outlined icon-left="minus-thick" type="is-primary" tag="router-link" :to="{ path: '/about' }">
-                            Salirse
-                        </b-button>
+                    <p class="is-size-2 is-size-2-mobile has-text-weight-bold"><b-icon size="is-medium" :icon="icono"/> {{community}}</p>
+                    <p class="is-size-4 is-size-5-mobile">¡Ve lo que piensan los demás!</p>
+                    <div class="buttons is-centered mt-2">
+                        <b-button
+                        label="Salir"
+                        rounded
+                        inverted
+                        outlined
+                        icon-left="minus-thick"
+                        type="is-primary"
+                        tag="router-link"
+                        :to="{ path: '/about' }"/>
                     </div>
                 </div>
             </section>
@@ -24,6 +30,10 @@
 
 <script>
 export default {
-    name: 'MuroCabecera'
+    name: 'MuroCabecera',
+    props: {
+        community: String,
+        icono: String
+    }
 }
 </script>
