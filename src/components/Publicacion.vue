@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <div class="card">
             <b-field class="mt-4 mx-2" >
                 <b-input type="textarea" placeholder="Platicanos que piensas" minlength="1" maxlength="140" v-model="pub"></b-input>

@@ -23,7 +23,7 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
-                <b-navbar-item class="has-text-left">
+                <b-navbar-item class="has-text-left is-hidden-fullhd is-hidden-widescreen">
                     <b-dropdown aria-role="list">
                         <template #trigger="{ active }">
                             <div class="buttons">
@@ -85,7 +85,7 @@
                     </header>
                 </div>
                 <figure class="image is-4by3">
-                    <img src="@/assets/img/ZeroTwoWindowsTerminal.png" alt="Perfil">
+                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Perfil">
                 </figure><br>
                 <div class="media-content mb-1">
                     <b-tag class="m-1" type="is-dark" size="is-medium">Carlos Iván Moo Barrera</b-tag>

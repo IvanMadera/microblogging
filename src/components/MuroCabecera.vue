@@ -1,6 +1,5 @@
 <template>
-    <div class="container">
-        <br>
+    <div>
         <div class="card">
             <section class="hero is-primary back">
                 <div class="hero-body">
