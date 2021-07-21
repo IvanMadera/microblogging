@@ -8,10 +8,10 @@
                     </b-field>
                 </div>
                 <div class="buttons">
-                    <b-button type="is-success" @click="addPub">Publicar</b-button>
+                    <b-button type="is-light" @click="addPub">Publicar</b-button>
                     <b-dropdown v-model="nameTag" aria-role="list" append-to-body>
                         <template #trigger>
-                            <b-button :label="nameTag.text" type="is-primary" :icon-left="nameTag.icon" icon-right="menu-down"/>
+                            <b-button :label="nameTag.text" type="is-light" :icon-left="nameTag.icon" icon-right="menu-down"/>
                         </template>
                         <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta" aria-role="listitem">
                             <div class="media">
@@ -28,6 +28,16 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    .is-light, .is-light:active {
+        background-color: #51C4D3;
+        color: white !important;
+    }
+    .is-light:hover {
+        background-color: #126E82;
+    }
+</style>
 
 <script>
     import {mapState} from 'vuex';

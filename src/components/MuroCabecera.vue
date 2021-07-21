@@ -13,7 +13,7 @@
 
 <style scoped>
     .back {
-        background-image: linear-gradient(141deg, #334257 0%, #548CA8 71%, #EEEEEE 100%) !important;
+        background-image: linear-gradient(141deg, #51C4D3 0%, #126E82 71%, #132C33 100%) !important;
     }
 </style>
 

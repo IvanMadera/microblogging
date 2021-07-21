@@ -8,6 +8,7 @@
                     </div>
                     <b-button
                     class="ml-2 is-justify-content-left is-gray"
+                    type="is-light"
                     expanded
                     rounded
                     @click="isModalActive = !isModalActive">Platicanos que piensas</b-button>
@@ -21,12 +22,16 @@
 </template>
 
 <style scoped>
-    .is-gray {
-        color: gray;
-        border: 1px solid gray;
+    .is-gray{
+        color: gray !important;
+        border: 1px solid gray !important;
     }
     .mt-custom {
         margin-top: 0.20rem;
+    }
+    .is-light:hover {
+        color: gray;
+        border: 1px solid gray;
     }
 </style>
 
