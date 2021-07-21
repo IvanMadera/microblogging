@@ -1,7 +1,7 @@
 <template>
     <div>
-        <Navbar></Navbar>
-        <Cabecera title="Reportes"></Cabecera>
+        <NavAdmin/>
+        <Tab title="Reportes"/>
         <div class="container has-text-left">
             <b-table striped hoverable :data="data">
                 <b-table-column field="id" label="ID" sortable v-slot="props">
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
-import Cabecera from '@/components/Cabecera.vue'
+import NavAdmin from '@/components/NavAdmin.vue'
+import Tab from '@/components/Tab.vue'
 
 export default {
     name: 'Report',
     components: {
-        Navbar,
-        Cabecera
+        NavAdmin,
+        Tab
     },
     data() {
         return {

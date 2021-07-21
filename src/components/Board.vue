@@ -67,59 +67,7 @@
             </footer>
         </div>
         <div class="card p-2" v-show="showComment">
-             <b-button
-                    v-model="showMostrar"
-                    type="is-text"
-                    v-show="showMostrar"
-                    @click="showMostrar = !showMostrar, showSubComment = !showSubComment">Mostrar los comentarios</b-button>
-            <div v-show="showSubComment">
-                <div class="media has-background-white-ter p-1 borde">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
-                        </figure>
-                    </div>
-                    <div class="media-content has-text-left">
-                        <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
-                        <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
-                    </div>
-                </div>
-                <div class="media has-background-white-ter p-1 borde">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
-                        </figure>
-                    </div>
-                    <div class="media-content has-text-left">
-                        <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
-                        <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
-                    </div>
-                </div>
-                <div class="media has-background-white-ter p-1 borde">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
-                        </figure>
-                    </div>
-                    <div class="media-content has-text-left">
-                        <p class="title is-6 mt-1">Ivan Gabriel Madera Torres</p>
-                        <p class="subtitle is-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-3 is-flex is-flex-direction-row p-1">
-                <figure class="media-left image is-48x48">
-                    <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
-                </figure>
-                <div class="media-content">
-                    <b-field class="mt-1">
-                        <b-input  class="is-flex is-flex-wrap-wrap" expanded placeholder="Escribe un comentario" maxlength="140"></b-input>
-                        <p class="control">
-                            <b-button class="button is-success" icon-right="send"></b-button>
-                        </p>
-                    </b-field>
-                </div>
-            </div>
+            <Comments/>
         </div>
     </div>
 </template>
@@ -154,6 +102,8 @@
 </style>
 
 <script>
+import Comments from '@/components/Comments.vue'
+
 import {mapState} from 'vuex';
 
 export default {
@@ -162,8 +112,6 @@ export default {
         return {
             showComment: false,
             showPublication: true,
-            showMostrar: true,
-            showSubComment: false,
             nameGift: { icon: 'gift', text: 'Premios'},
             gifts:[
                 { icon: 'hexagon-outline', text: '20 Exp'},
@@ -175,6 +123,9 @@ export default {
                 { icon: 'hexagon-slice-6', text: '5000 Exp'}
             ]
         }
+    },
+    components: {
+      Comments  
     },
     computed: {
         ...mapState(['tareas'])

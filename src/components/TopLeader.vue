@@ -6,16 +6,16 @@
                     <span><b-icon class="mr-2" icon="podium"/>Líder de Experiencia</span>
                 </div>
             </div>
-            <div class="card-content content-border has-text-left">
+            <div class="card-content content-border">
                 <div class="media">
                     <div class="media-left">
                         <figure class="image is-48x48">
                         <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                         </figure>
                     </div>
-                    <div class="media-content">
-                        <p class="title is-4">Usuario</p>
-                        <p class="subtitle is-6">Cant. Exp</p>
+                    <div class="media-content has-text-left mt-1">
+                        <p class="title is-5">Usuario</p>
+                        <p class="subtitle is-7">Cantidad Experiencia</p>
                     </div>
                 </div>
             </div>

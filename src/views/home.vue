@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Navbar></Navbar>
+        <NavAdmin/>
             <section class="hero is-white is-fullheight">
                 <div class="hero-body">
                 <div class="container">
@@ -22,17 +22,17 @@
                             </h2>
                         <div class="buttons">
                             <div class="center">
-                            <b-button icon-left= "face-recognition" tag="router-link" to="/anime">Anime</b-button>
-                            <b-button icon-left= "poker-chip" tag="router-link" to="/gaming">Gaming</b-button>
-                            <b-button icon-left= "laptop" tag="router-link" to="/tecnologia">Tecnología</b-button>
-                            <b-button icon-left= "xml" tag="router-link" to="/programacion">Programación</b-button>
-                            <b-button icon-left= "state-machine" tag="router-link" to="/ia">Inteligencia Artificial</b-button>
-                            <b-button icon-left= "trophy-variant" tag="router-link" to="/deportes">Deportes</b-button>
-                            <b-button icon-left= "security" tag="router-link" to="/ciberseguridad">Ciberseguridad</b-button>
-                            <b-button icon-left= "monitor-edit" tag="router-link" to="/s&h">Software & Hardware</b-button>
-                            <b-button icon-left= "memory" tag="router-link" to="/electronica">Electrónica</b-button>
-                            <b-button icon-left= "music" tag="router-link" to="/musica">Música</b-button>
-                            <b-button icon-left= "card-account-details-star-outline" tag="router-link" to="/itm">Instituto Tecnológico</b-button>
+                            <b-button icon-left= "face-recognition" tag="router-link" to="/community">Anime</b-button>
+                            <b-button icon-left= "poker-chip" tag="router-link" to="/">Gaming</b-button>
+                            <b-button icon-left= "laptop" tag="router-link" to="/">Tecnología</b-button>
+                            <b-button icon-left= "xml" tag="router-link" to="/">Programación</b-button>
+                            <b-button icon-left= "state-machine" tag="router-link" to="/">Inteligencia Artificial</b-button>
+                            <b-button icon-left= "trophy-variant" tag="router-link" to="/">Deportes</b-button>
+                            <b-button icon-left= "security" tag="router-link" to="/">Ciberseguridad</b-button>
+                            <b-button icon-left= "monitor-edit" tag="router-link" to="/">Software & Hardware</b-button>
+                            <b-button icon-left= "memory" tag="router-link" to="/">Electrónica</b-button>
+                            <b-button icon-left= "music" tag="router-link" to="/">Música</b-button>
+                            <b-button icon-left= "card-account-details-star-outline" tag="router-link" to="/">Instituto Tecnológico</b-button>
                             </div>
                         </div>
                     </div>
@@ -56,16 +56,12 @@
 
 <script>
 
-import Navbar from '@/components/Navbar.vue'
-import Bienvenida from '@/components/Bienvenida.vue'
-import CommunitiesNav from '@/components/CommunitiesNav.vue'
+import NavAdmin from '@/components/NavAdmin.vue'
 
 export default {
-    name: 'HomeNew',
+    name: 'home',
     components: {
-        Navbar,
-        Bienvenida,
-        CommunitiesNav
+        NavAdmin
     },
     data() {
         return {

@@ -16,7 +16,7 @@
             </div>
         </div>
         <b-collapse v-model="isModalActive">
-            <Publicacion/>
+            <Publication/>
         </b-collapse>
     </div>
 </template>
@@ -36,7 +36,7 @@
 </style>
 
 <script>
-import Publicacion from '@/components/Publicacion.vue'
+import Publication from '@/components/Publication.vue'
 
 export default {
     name: 'PubInput',
@@ -46,7 +46,7 @@ export default {
         }
     },
     components: {
-        Publicacion
+        Publication
     }
 }
 </script>
