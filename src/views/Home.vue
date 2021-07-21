@@ -5,8 +5,9 @@
       <Cabecera title="Home"/>
       <PubInput/>
       <div class="columns mt-2 is-desktop">
-        <div class="column is-3 is-hidden-touch">
-          <CommunitiesNav/>
+        <div class="column is-3">
+          <CommunitiesNav class="is-hidden-touch"/>
+          <TopLeader class="mt-2"/>
         </div>
         <div class="column is-9">
           <div class="mb-2">
@@ -26,6 +27,7 @@ import PubInput from '@/components/PubInput.vue'
 import Publicacion from '@/components/Publicacion.vue'
 import MuroCabecera from '@/components/MuroCabecera.vue'
 import CommunitiesNav from '@/components/CommunitiesNav.vue'
+import TopLeader from '@/components/TopLeader.vue'
 import Muro from '@/components/Muro.vue'
 
 export default {
@@ -36,8 +38,9 @@ export default {
     PubInput,
     Publicacion,
     MuroCabecera,
-    Muro,
-    CommunitiesNav
+    CommunitiesNav,
+    TopLeader,
+    Muro
   }
 }
 </script>
