@@ -2,11 +2,11 @@
     <div>
         <div class="card">
             <div class="card-header">
-                <div class="card-header-title">
+                <div class="card-header-title color-header">
                     <span><b-icon class="mr-2" icon="account-group"/>Comunidades</span>
                 </div>
             </div>
-            <div class="card-content">
+            <div class="card-content content-border">
                 <div class="content">
                     <b-button
                     expanded
@@ -28,6 +28,13 @@
 <style scoped>
     .is-bg-white{
         background-color: #fff;
+    }
+    .color-header {
+        background-color: #126E82;
+        color: white !important;
+    }
+    .content-border {
+        border: 1px solid #51C4D3;
     }
 </style>
 

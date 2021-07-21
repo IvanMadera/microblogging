@@ -33,19 +33,19 @@
             <div class="card-content has-text-left">
                 <div class="content">
                     {{item.pub}}-{{item.tag}}
-                    <span class="tag is-warning mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
+                    <span class="tag is-blue-ocean mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
                 </div>
             </div>
             <hr class="dropdown-divider">
             <div class="is-flex is-justify-content-space-between m-2">
                 <div>
-                    <span class="tag is-success mr-1"><b-icon icon="thumb-up" size="is-small" /><p>150</p></span>
-                    <span class="tag is-danger"><b-icon icon="thumb-down" size="is-small" /><p>150</p></span>
+                    <span class="tag is-light-blue mr-1"><b-icon icon="thumb-up" size="is-small" /><p>150</p></span>
+                    <span class="tag is-light-blue"><b-icon icon="thumb-down" size="is-small" /><p>150</p></span>
                 </div>
                 <div>
                     <b-dropdown v-model="nameGift" aria-role="list" append-to-body>
                         <template #trigger>
-                            <b-button class="is-small" type="is-light is-gold" :label="nameGift.text" :icon-right="nameGift.icon"/>
+                            <b-button class="is-small" type="is-light is-deep-ocean" :label="nameGift.text" :icon-right="nameGift.icon"/>
                         </template>
                         <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift" aria-role="listitem">
                         <div class="media">
@@ -60,10 +60,10 @@
             </div>
             
             <footer class="card-footer">
-                <b-button expanded class="is-green" label="Like" type="is-light" icon-left="thumb-up-outline"/>
-                <b-button expanded class="is-red" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
-                <b-button expanded class="is-blue" label="Discuss" type="is-light" @click="showComment = !showComment" v-model="showComment" icon-left="comment-multiple-outline"/>
-                <b-button expanded class="is-purple" label="Share" type="is-light" icon-left="share-all-outline"/> 
+                <b-button expanded class="is-color-button" label="Like" type="is-light" icon-left="thumb-up-outline"/>
+                <b-button expanded class="is-color-button" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
+                <b-button expanded class="is-color-button" label="Discuss" type="is-light" @click="showComment = !showComment" v-model="showComment" icon-left="comment-multiple-outline"/>
+                <b-button expanded class="is-color-button" label="Share" type="is-light" icon-left="share-all-outline"/> 
             </footer>
         </div>
         <div class="card p-2" v-show="showComment">
@@ -125,56 +125,28 @@
 </template>
 
 <style scoped>
-    .is-gold{
-        background-color: #ffa500;
+    .is-deep-ocean, .is-deep-ocean:active{
+        background-color: #132C33;
         color: white !important;
     }
-    .is-gold:hover{
-        background-color: #ffbf00;
+    .is-deep-ocean:hover{
+        background-color: #51C4D3;
     }
-    .is-green {
+    .is-color-button, .is-color-button:active {
         border-radius: 0;
-        background-color: #effaf5 ;
-        color: #257953 !important;
+        background-color: #D8E3E7 ;
+        color: #126E82 !important;
     }
-    .is-green:hover {
-        background-color: #e6f7ef;
+    .is-color-button:hover {
+        background-color: #c8d0d3;
     }
-    .is-green:active {
-        background-color: #dcf4e9;
+    .is-light-blue {
+        background-color: #51C4D3;
+        color: white;
     }
-    .is-red {
-        border-radius: 0;
-        background-color: #feecf0 ;
-        color: #cc0f35 !important;
-    }
-    .is-red:hover {
-        background-color: #fde0e6;
-    }
-    .is-red:active {
-        background-color: #fcd4dc;
-    }
-    .is-blue {
-        border-radius: 0;
-        background-color: #ecf4fe;
-        color: #0d68ce !important;
-    }
-    .is-blue:hover {
-        background-color: #dae9f6;
-    }
-    .is-blue:active {
-        background-color: #d4e7fc;
-    }
-    .is-purple {
-        border-radius: 0;
-        background-color: #f2effb;
-        color: #552fbc !important;
-    }
-    .is-purple:hover {
-        background-color: #eae4f8;
-    }
-    .is-purple:active {
-        background-color: #e2daf6;
+    .is-blue-ocean {
+        background-color: #126E82;
+        color: white;
     }
     .borde {
         border-radius: 15px;

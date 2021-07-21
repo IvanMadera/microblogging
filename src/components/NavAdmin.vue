@@ -68,7 +68,7 @@
                     <div class="buttons">
                         <b-button
                         class="has-text-weight-bold"
-                        type="is-success"
+                        type="is-light"
                         icon-left="account-circle"
                         label="Perfil"
                         size="is-default"
@@ -108,6 +108,16 @@
         </b-modal>
     </div>
 </template>
+
+<style scoped>
+    .is-light, .is-light:active {
+        background-color: #126E82;
+        color: white !important;
+    }
+    .is-light:hover {
+        background-color: #132C33;
+    }
+</style>
 
 <script>
     export default {
