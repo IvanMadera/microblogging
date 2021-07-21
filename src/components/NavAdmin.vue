@@ -76,6 +76,7 @@
                     </div>
                 </b-navbar-item>
             </template>
+            <!-- hola -->
         </b-navbar>
         <b-modal v-model="isCardModalActive">
             <div class="card">
