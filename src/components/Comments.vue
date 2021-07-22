@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="card">
         <b-button
             v-model="showMostrar"
             type="is-text"

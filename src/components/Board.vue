@@ -1,6 +1,6 @@
 <template>
     <div v-show="showPublication">
-        <div class="card pb-2" v-for="(item, index) in tareas" :key="index">
+        <div class="card pb-2 mb-2 border-card">
             <div class="card-header p-2">
                 <figure class="image is-48x48">
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
@@ -32,7 +32,7 @@
             </div>
             <div class="card-content has-text-left">
                 <div class="content">
-                    {{item.pub}}-{{item.tag}}
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum vero laboriosam earum molestiae doloribus eum nemo possimus iusto nesciun.
                     <span class="tag is-blue-ocean mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
                 </div>
             </div>
@@ -43,19 +43,30 @@
                     <span class="tag is-light-blue"><b-icon icon="thumb-down" size="is-small" /><p>150</p></span>
                 </div>
                 <div>
-                    <b-dropdown v-model="nameGift" aria-role="list" append-to-body>
-                        <template #trigger>
-                            <b-button class="is-small" type="is-light is-deep-ocean" :label="nameGift.text" :icon-right="nameGift.icon"/>
-                        </template>
-                        <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift" aria-role="listitem">
-                        <div class="media">
-                            <b-icon class="media-left" :icon="gift.icon"></b-icon>
-                            <div class="media-content">
-                                <h3>{{gift.text}}</h3>
-                            </div>
-                        </div>
-                    </b-dropdown-item>
-                    </b-dropdown>
+                    <div class="is-flex">
+                        <b-button v-show="showtag" class="is-small dis-button mr-2" disabled>{{selected}}</b-button>
+                        <b-dropdown
+                            v-model="selected"
+                            aria-role="list">
+                            <template #trigger>
+                                <b-button
+                                    class="is-small"
+                                    type="is-light is-deep-ocean"
+                                    icon-right="gift">
+                                    Premios
+                                </b-button>
+                            </template>
+
+                            <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift.text" @click="showtag= true" aria-role="listitem">
+                                <div class="media has-text-left">
+                                    <b-icon class="media-left" :icon="gift.icon"></b-icon>
+                                    <div class="media-content">
+                                        <h3>{{gift.text}}</h3>
+                                    </div>
+                                </div>
+                            </b-dropdown-item>
+                        </b-dropdown>
+                    </div>
                 </div>
             </div>
             
@@ -96,8 +107,12 @@
         background-color: #126E82;
         color: white;
     }
-    .borde {
-        border-radius: 15px;
+    .border-card {
+        border: 1px solid #51C4D3;
+    }
+    .dis-button {
+        background-color: #126E82 ;
+        color: white !important;
     }
 </style>
 
@@ -112,6 +127,8 @@ export default {
         return {
             showComment: false,
             showPublication: true,
+            showtag: false,
+            selected: '',
             nameGift: { icon: 'gift', text: 'Premios'},
             gifts:[
                 { icon: 'hexagon-outline', text: '20 Exp'},
