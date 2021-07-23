@@ -9,12 +9,20 @@
                 </div>
                 <div class="buttons">
                     <b-button type="is-light" @click="addPub">Publicar</b-button>
-                    <b-dropdown v-model="nameTag" aria-role="list" append-to-body>
-                        <template #trigger>
-                            <b-button :label="nameTag.text" type="is-light" :icon-left="nameTag.icon" icon-right="menu-down"/>
+                    <b-dropdown
+                        v-model="selected"
+                        aria-role="list">
+                        <template #trigger="{ active }">
+                            <b-button
+                                icon-left="tag"
+                                type="is-light"
+                                :icon-right="active ? 'menu-up' : 'menu-down'">
+                                Tag
+                            </b-button>
                         </template>
-                        <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta" aria-role="listitem">
-                            <div class="media">
+
+                        <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta.text" @click="showtag= true" aria-role="listitem">
+                            <div class="media has-text-left">
                                 <b-icon class="media-left" :icon="etiqueta.icon"></b-icon>
                                 <div class="media-content">
                                     <h3>{{etiqueta.text}}</h3>
@@ -23,6 +31,7 @@
                             </div>
                         </b-dropdown-item>
                     </b-dropdown>
+                    <b-button v-show="showtag" class="ml-2 dis-button" disabled>{{selected}}</b-button>
                 </div>
             </div>
         </div>
@@ -36,6 +45,10 @@
     }
     .is-light:hover {
         background-color: #126E82;
+    }
+    .dis-button {
+        background-color: #126E82 ;
+        color: white !important;
     }
 </style>
 
@@ -58,7 +71,9 @@
                     {id: '8', icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
                     {id: '9', icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
                 ],
-                pub: ''
+                showtag: false,
+                pub: '',
+                selected: ''
             }
         },
         computed: {
