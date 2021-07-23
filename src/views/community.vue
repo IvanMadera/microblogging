@@ -14,6 +14,7 @@
             <Headboard icono="face-recognition" community="Comunidad"/>
           </div>
           <Board/>
+          <Board/>
         </div>
       </div>
     </div>

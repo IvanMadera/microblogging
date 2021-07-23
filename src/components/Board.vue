@@ -1,6 +1,6 @@
 <template>
     <div v-show="showPublication">
-        <div class="card pb-2 mb-2 border-card">
+        <div class="card pb-2 mt-2 border-card">
             <div class="card-header p-2">
                 <figure class="image is-48x48">
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
