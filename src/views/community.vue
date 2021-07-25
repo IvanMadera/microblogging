@@ -5,11 +5,11 @@
       <Tab title="Home"/>
       <PubInput/>
       <div class="columns mt-2 is-desktop">
-        <div class="column is-3">
+        <div class="column is-12-touch is-3-desktop">
           <CommunitiesNav class="is-hidden-touch"/>
           <TopLeader class="mt-2"/>
         </div>
-        <div class="column is-9">
+        <div class="column is-12-touch is-9-desktop">
           <div class="mb-2">
             <Headboard icono="face-recognition" community="Comunidad"/>
           </div>

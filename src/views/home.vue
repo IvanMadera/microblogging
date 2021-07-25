@@ -4,7 +4,7 @@
             <section class="hero is-white is-fullheight">
                 <div class="hero-body">
                 <div class="container">
-                    <div class="columns is-vcentered reverse-columns">
+                    <div class="columns is-vcentered reverse-columns is-desktop">
                     <div class="column
                     is-10-mobile is-offset-1-mobile
                     is-10-tablet is-offset-1-tablet
@@ -22,17 +22,16 @@
                             </h2>
                         <div class="buttons">
                             <div class="center">
-                            <b-button icon-left= "face-recognition" tag="router-link" to="/community">Anime</b-button>
-                            <b-button icon-left= "poker-chip" tag="router-link" to="/">Gaming</b-button>
-                            <b-button icon-left= "laptop" tag="router-link" to="/">Tecnología</b-button>
-                            <b-button icon-left= "xml" tag="router-link" to="/">Programación</b-button>
-                            <b-button icon-left= "state-machine" tag="router-link" to="/">Inteligencia Artificial</b-button>
-                            <b-button icon-left= "trophy-variant" tag="router-link" to="/">Deportes</b-button>
-                            <b-button icon-left= "security" tag="router-link" to="/">Ciberseguridad</b-button>
-                            <b-button icon-left= "monitor-edit" tag="router-link" to="/">Software & Hardware</b-button>
-                            <b-button icon-left= "memory" tag="router-link" to="/">Electrónica</b-button>
-                            <b-button icon-left= "music" tag="router-link" to="/">Música</b-button>
-                            <b-button icon-left= "card-account-details-star-outline" tag="router-link" to="/">Instituto Tecnológico</b-button>
+                                <b-button
+                                v-for="(menu, index) in communities"
+                                :key="index"
+                                tag="router-link"
+                                :to="{path: menu.ref}"
+                                class="is-bg-white"
+                                type="is-light"
+                                size="is-default"
+                                :icon-left="menu.icon"
+                                :label="menu.text"/>
                             </div>
                         </div>
                     </div>
@@ -65,6 +64,19 @@ export default {
     },
     data() {
         return {
+            communities: [
+                { icon: 'face-recognition', text: 'Anime', ref: '/community' },
+                { icon: 'poker-chip', text: 'Gaming', ref: '/' },
+                { icon: 'laptop', text: 'Tecnología', ref: '/' },
+                { icon: 'xml', text: 'Programación', ref: '/' },
+                { icon: 'state-machine', text: 'Inteligencia Artificial', ref: '/' },
+                { icon: 'trophy-variant', text: 'Deportes', ref: '/' },
+                { icon: 'security', text: 'Ciberseguridad', ref: '/' },
+                { icon: 'monitor-edit', text: 'Software & Hardware', ref: '/' },
+                { icon: 'memory', text: 'Electrónica', ref: '/' },
+                { icon: 'music', text: 'Música', ref: '/' },
+                { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico', ref: '/' },
+            ],
         }
     },
 }
