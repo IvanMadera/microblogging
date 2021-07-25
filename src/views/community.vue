@@ -11,6 +11,7 @@
         </div>
         <div class="column is-9">
           <div class="mb-2">
+
             <Headboard icono="face-recognition" community="Comunidad"/>
           </div>
           <Board/>
@@ -29,6 +30,7 @@ import Headboard from '@/components/Headboard.vue'
 import CommunitiesNav from '@/components/CommunitiesNav.vue'
 import TopLeader from '@/components/TopLeader.vue'
 import Board from '@/components/Board.vue'
+import Home from '@/views/home.vue'
 
 export default {
   name: 'communities',
@@ -39,7 +41,8 @@ export default {
     Headboard,
     CommunitiesNav,
     TopLeader,
-    Board
+    Board,
+    Home
   }
 }
 </script>

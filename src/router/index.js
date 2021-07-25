@@ -7,18 +7,19 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/home.vue')
+    component: () => import(/* webpackChunkName: "home" */ '../views/home.vue')
   },
-  {
-    path: '/community',
-    name: 'community',
-    component: () => import(/* webpackChunkName: "about" */ '../views/community.vue')
+   {
+  path: '/community/:id',
+  name: 'community',
+  component: () => import(/* webpackChunkName: "community" */ '../views/community.vue')
   },
   {
     path: '/report',
     name: 'report',
-    component: () => import(/* webpackChunkName: "about" */ '../views/report.vue')
+    component: () => import(/* webpackChunkName: "report" */ '../views/report.vue')
   }
+  
 ]
 
 const router = new VueRouter({
