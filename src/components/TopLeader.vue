@@ -23,16 +23,6 @@
     </div>
 </template>
 
-<style scoped>
-    .color-header {
-        background-color: #126E82;
-        color: white !important;
-    }
-    .content-border {
-        border: 1px solid #51C4D3;
-    }
-</style>
-
 <script>
 export default {
     name: 'TopLeader'

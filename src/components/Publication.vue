@@ -8,12 +8,13 @@
                     </b-field>
                 </div>
                 <div class="buttons">
-                    <b-button type="is-light" @click="addPub">Publicar</b-button>
+                    <b-button class="is-light-ocean" type="is-light" @click="addPub">Publicar</b-button>
                     <b-dropdown
                         v-model="selected"
                         aria-role="list">
                         <template #trigger="{ active }">
                             <b-button
+                                class="is-light-ocean"
                                 icon-left="tag"
                                 type="is-light"
                                 :icon-right="active ? 'menu-up' : 'menu-down'">
@@ -38,22 +39,8 @@
     </div>
 </template>
 
-<style scoped>
-    .is-light, .is-light:active {
-        background-color: #51C4D3;
-        color: white !important;
-    }
-    .is-light:hover {
-        background-color: #126E82;
-    }
-    .dis-button {
-        background-color: #126E82 ;
-        color: white !important;
-    }
-</style>
-
 <script>
-    import {mapState} from 'vuex';
+import {mapState} from 'vuex';
 
     export default {
         name: 'Publicacion',

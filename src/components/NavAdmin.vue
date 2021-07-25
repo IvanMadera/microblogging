@@ -11,14 +11,14 @@
             <template #start>
                 <b-navbar-item tag="router-link" :to="{ path: '/' }">
                     <div class="buttons">
-                        <b-button type="is-light" icon-left="home" size="is-default">
-                            <strong>Home</strong>
+                        <b-button class="is-ocean-inverted" type="is-light" icon-left="home" size="is-default">
+                            <strong class="has-text-italic">Home</strong>
                         </b-button>
                     </div>
                 </b-navbar-item>
                 <b-navbar-item tag="router-link" :to="{ path: '/report' }">
                     <div class="buttons">
-                        <b-button type="is-light" icon-left="flag" size="is-default">
+                        <b-button class="is-ocean-inverted" type="is-light" icon-left="flag" size="is-default">
                             <strong>Reportes</strong>
                         </b-button>
                     </div>
@@ -28,7 +28,7 @@
                         <template #trigger="{ active }">
                             <div class="buttons">
                                 <b-button
-                                class="has-text-weight-bold"
+                                class="has-text-weight-bold is-ocean-inverted"
                                 type="is-light"
                                 size="is-default"
                                 icon-left="account-group"
@@ -67,7 +67,7 @@
                 <b-navbar-item>
                     <div class="buttons">
                         <b-button
-                        class="has-text-weight-bold"
+                        class="has-text-weight-bold is-ocean"
                         type="is-light"
                         icon-left="account-circle"
                         label="Perfil"
@@ -108,16 +108,6 @@
         </b-modal>
     </div>
 </template>
-
-<style scoped>
-    .is-light, .is-light:active {
-        background-color: #126E82;
-        color: white !important;
-    }
-    .is-light:hover {
-        background-color: #132C33;
-    }
-</style>
 
 <script>
     export default {

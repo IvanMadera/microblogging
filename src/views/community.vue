@@ -15,6 +15,7 @@
           </div>
           <Board/>
           <Board/>
+          <Board/>
         </div>
       </div>
     </div>

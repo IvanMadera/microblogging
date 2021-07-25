@@ -18,23 +18,13 @@
                 <b-field class="mt-1">
                     <b-input  class="is-flex is-flex-wrap-wrap" expanded placeholder="Escribe un comentario" maxlength="140"></b-input>
                     <p class="control">
-                        <b-button class="button is-light is-blue-ocean" icon-right="send"></b-button>
+                        <b-button class="button is-ocean" type="is-light" icon-right="send"></b-button>
                     </p>
                 </b-field>
             </div>
         </div>
     </div>
 </template>
-
-<style scoped>
-    .is-blue-ocean {
-        background-color: #126E82;
-        color: white !important;
-    }
-    .is-blue-ocean:hover {
-        background-color: #51C4D3;
-    }
-</style>
 
 <script>
 import CommentUnit from '@/components/CommentUnit.vue'

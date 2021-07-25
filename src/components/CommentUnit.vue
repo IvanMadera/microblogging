@@ -1,5 +1,5 @@
 <template>
-    <div class="media has-background-white-ter p-1 border">
+    <div class="media has-background-white-ter p-1 border-comment">
         <div class="media-left">
             <figure class="image is-48x48">
                 <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png" alt="Image">
@@ -12,14 +12,8 @@
     </div>
 </template>
 
-<style scoped>
-    .border {
-        border-radius: 15px;
-    }
-</style>
-
 <script>
 export default {
-    name: 'CommentUnit'
+    name: 'CommentUnit',
 }
 </script>

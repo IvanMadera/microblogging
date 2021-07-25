@@ -21,20 +21,6 @@
     </div>
 </template>
 
-<style scoped>
-    .is-gray{
-        color: gray !important;
-        border: 1px solid gray !important;
-    }
-    .mt-custom {
-        margin-top: 0.20rem;
-    }
-    .is-light:hover {
-        color: gray;
-        border: 1px solid gray;
-    }
-</style>
-
 <script>
 import Publication from '@/components/Publication.vue'
 
