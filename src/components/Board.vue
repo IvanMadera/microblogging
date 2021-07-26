@@ -8,24 +8,24 @@
                 <p class="card-header-title">
                     Ivan Gabriel Madera Torres
                 </p>
-                <b-dropdown class="is-align-items-center">
+                <b-dropdown v-model="reports" class="is-align-items-center">
                     <template #trigger>
                         <b-button type="is-light" icon-left="dots-horizontal"/>
                     </template>
-                    <b-dropdown-item>
+                    <b-dropdown-item value="1">
                         <div class="media">
                             <b-icon class="media-left" icon="alert-octagon"></b-icon>
-                                <div class="media-content">
-                                    <h3>Reportar</h3>
-                                </div>
+                            <div class="media-content">
+                                <h3>Reportar</h3>
+                            </div>
                         </div>
                     </b-dropdown-item>
                     <b-dropdown-item>
                         <div class="media" @click="showPublication = !showPublication">
                             <b-icon class="media-left" icon="eye-off"></b-icon>
-                                <div class="media-content">
-                                    <h3>Ocultar</h3>
-                                </div>
+                            <div class="media-content">
+                                <h3>Ocultar</h3>
+                            </div>
                         </div>
                     </b-dropdown-item>
                 </b-dropdown>
@@ -44,7 +44,7 @@
                 </div>
                 <div>
                     <div class="is-flex">
-                        <b-button v-show="showtag" class="is-small dis-button mr-2" disabled>{{selected}}</b-button>
+                        <b-button v-show="showtag" class="is-small dis-button mr-2" disabled>{{selected}} Exp</b-button>
                         <b-dropdown
                             v-model="selected"
                             aria-role="list">
@@ -57,11 +57,11 @@
                                 </b-button>
                             </template>
 
-                            <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift.text" @click="showtag= true" aria-role="listitem">
+                            <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift.val" @click="showtag= true" aria-role="listitem">
                                 <div class="media has-text-left">
                                     <b-icon class="media-left" :icon="gift.icon"></b-icon>
                                     <div class="media-content">
-                                        <h3>{{gift.text}}</h3>
+                                        <h3>{{gift.val}} Exp</h3>
                                     </div>
                                 </div>
                             </b-dropdown-item>
@@ -69,7 +69,6 @@
                     </div>
                 </div>
             </div>
-            
             <footer class="card-footer">
                 <b-button expanded class="is-gray-reaction" label="Like" type="is-light" icon-left="thumb-up-outline"/>
                 <b-button expanded class="is-gray-reaction" label="Dislike" type="is-light" icon-left="thumb-down-outline"/>
@@ -96,15 +95,16 @@ export default {
             showPublication: true,
             showtag: false,
             selected: '',
+            reports: 0,
             nameGift: { icon: 'gift', text: 'Premios'},
             gifts:[
-                { icon: 'hexagon-outline', text: '20 Exp'},
-                { icon: 'hexagon-slice-1', text: '50 Exp'},
-                { icon: 'hexagon-slice-2', text: '100 Exp'},
-                { icon: 'hexagon-slice-3', text: '200 Exp'},
-                { icon: 'hexagon-slice-4', text: '500 Exp'},
-                { icon: 'hexagon-slice-5', text: '1000 Exp'},
-                { icon: 'hexagon-slice-6', text: '5000 Exp'}
+                { icon: 'hexagon-outline', val: 20},
+                { icon: 'hexagon-slice-1', val: 50},
+                { icon: 'hexagon-slice-2', val: 100},
+                { icon: 'hexagon-slice-3', val: 200},
+                { icon: 'hexagon-slice-4', val: 500},
+                { icon: 'hexagon-slice-5', val: 1000},
+                { icon: 'hexagon-slice-6', val: 5000}
             ]
         }
     },

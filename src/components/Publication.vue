@@ -48,15 +48,15 @@ import {mapState} from 'vuex';
             return {
                 nameTag: { icon: 'tag-multiple', text: 'Tags' },
                 etiquetas:[
-                    {id: '1', icon: 'lifebuoy', text: 'Ayuda', description: 'Solicitar apoyo con respecto a lo que refleja el post'},
-                    {id: '2', icon: 'head-question', text: 'Duda', description: 'Pregunta con respecto al post'},
-                    {id: '3', icon: 'boomerang', text: 'Offtopic', description: 'Tema fuera de los tags predeterminados'},
-                    {id: '4', icon: 'note-multiple', text: 'Trámites', description: 'Duda respecto a los trámites'},
-                    {id: '5', icon: 'bookshelf', text: 'Materias', description: 'Publicaciones sobre materias de la carrera'},
-                    {id: '6', icon: 'brain', text: 'Interesante', description: 'Publicaciones sobre cosas curiosas'},
-                    {id: '7', icon: 'alert-decagram', text: 'Spoiler', description: 'Publicaciones que contiene spoilers de un tema'},
-                    {id: '8', icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
-                    {id: '9', icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
+                    {icon: 'lifebuoy', text: 'Ayuda', description: 'Solicitar apoyo con respecto a lo que refleja el post'},
+                    {icon: 'head-question', text: 'Duda', description: 'Pregunta con respecto al post'},
+                    {icon: 'boomerang', text: 'Offtopic', description: 'Tema fuera de los tags predeterminados'},
+                    {icon: 'note-multiple', text: 'Trámites', description: 'Duda respecto a los trámites'},
+                    {icon: 'bookshelf', text: 'Materias', description: 'Publicaciones sobre materias de la carrera'},
+                    {icon: 'brain', text: 'Interesante', description: 'Publicaciones sobre cosas curiosas'},
+                    {icon: 'alert-decagram', text: 'Spoiler', description: 'Publicaciones que contiene spoilers de un tema'},
+                    {icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
+                    {icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
                 ],
                 showtag: false,
                 pub: '',
