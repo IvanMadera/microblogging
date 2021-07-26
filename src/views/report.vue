@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NavAdmin/>
+        <NavReport/>
         <Tab title="Reportes"/>
         <div class="container has-text-left">
             <b-table striped hoverable :data="data">
@@ -35,13 +35,13 @@
 </template>
 
 <script>
-import NavAdmin from '@/components/NavAdmin.vue'
+import NavReport from '@/components/NavReport.vue'
 import Tab from '@/components/Tab.vue'
 
 export default {
     name: 'Report',
     components: {
-        NavAdmin,
+        NavReport,
         Tab
     },
     data() {
