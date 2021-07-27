@@ -14,12 +14,12 @@
                     {{props.row.l_name}}
                 </b-table-column>
                 <b-table-column field="data.date" label="Fecha" v-slot="props" centered>
-                    <span class="tag is-success">
+                    <span class="tag is-blue-ocean-tag">
                         {{props.row.date}}
                     </span>
                 </b-table-column>
                 <b-table-column field="reports" label="Reportes" v-slot="props" sortable centered>
-                    <span class="tag is-warning">
+                    <span class="tag is-deep-ocean-tag">
                         {{props.row.reports}}
                     </span>
                 </b-table-column>
@@ -27,7 +27,7 @@
                     {{props.row.content}}
                 </b-table-column>
                 <b-table-column>
-                    <b-button class="is-fullwidth" type="is-danger" icon-right="delete" size="is-small"/>
+                    <b-button class="is-fullwidth is-light-ocean" type="is-light" icon-right="delete" size="is-small"/>
                 </b-table-column>
             </b-table>
         </div>
