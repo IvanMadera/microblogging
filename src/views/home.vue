@@ -26,7 +26,7 @@
                                 v-for="(menu, index) in communities"
                                 :key="index"
                                 tag="router-link"
-                                :to="{path: menu.ref}"
+                                :to="'/community/'+menu.id"
                                 class="is-bg-white"
                                 type="is-light"
                                 size="is-default"
@@ -35,7 +35,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- hola -->
                     <div data-aos="fade-right" class="column
                     is-10-mobile is-offset-1-mobile
                     is-10-tablet is-offset-1-tablet
@@ -65,25 +64,19 @@ export default {
     data() {
         return {
             communities: [
-                { icon: 'face-recognition', text: 'Anime', ref: '/community' },
-                { icon: 'poker-chip', text: 'Gaming', ref: '/' },
-                { icon: 'laptop', text: 'Tecnología', ref: '/' },
-                { icon: 'xml', text: 'Programación', ref: '/' },
-                { icon: 'state-machine', text: 'Inteligencia Artificial', ref: '/' },
-                { icon: 'trophy-variant', text: 'Deportes', ref: '/' },
-                { icon: 'security', text: 'Ciberseguridad', ref: '/' },
-                { icon: 'monitor-edit', text: 'Software & Hardware', ref: '/' },
-                { icon: 'memory', text: 'Electrónica', ref: '/' },
-                { icon: 'music', text: 'Música', ref: '/' },
-                { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico', ref: '/' },
-            ],
+                { id: 'anime', icon: 'face-recognition', text: 'Anime'},
+                { id: 'gaming', icon: 'poker-chip', text: 'Gaming'},
+                { id: 'tecnologia', icon: 'laptop', text: 'Tecnología'},
+                { id: 'programacion', icon: 'xml', text: 'Programación'},
+                { id: 'ia', icon: 'state-machine', text: 'Inteligencia Artificial'},
+                { id: 'deportes', icon: 'trophy-variant', text: 'Deportes'},
+                { id: 'ciberseguridad', icon: 'security', text: 'Ciberseguridad'},
+                { id: 'sw&hw', icon: 'monitor-edit', text: 'Software & Hardware'},
+                { id: 'electronica', icon: 'memory', text: 'Electrónica'},
+                { id: 'musica', icon: 'music', text: 'Música'},
+                { id: 'itm', icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico'}
+            ]
         }
     },
 }
 </script>
-
-<style scoped>
-.b-tooltips {
-        margin: center
-}
-</style>

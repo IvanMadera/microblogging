@@ -23,7 +23,7 @@
                         </b-button>
                     </div>
                 </b-navbar-item>
-                <b-navbar-item class="has-text-left is-hidden-desktop">
+                <b-navbar-item class="has-text-left">
                     <b-dropdown aria-role="list">
                         <template #trigger="{ active }">
                             <div class="buttons">
@@ -76,6 +76,7 @@
                     </div>
                 </b-navbar-item>
             </template>
+            <!-- hola -->
         </b-navbar>
         <b-modal v-model="isCardModalActive">
             <div class="card">

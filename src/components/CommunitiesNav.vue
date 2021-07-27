@@ -31,17 +31,17 @@ export default {
     data() {
         return {
             communities: [
-                { icon: 'face-recognition', text: 'Anime', ref: '/anime' },
-                { icon: 'poker-chip', text: 'Gaming', ref: '/gaming' },
-                { icon: 'laptop', text: 'Tecnología', ref: '/tecnologia' },
-                { icon: 'xml', text: 'Programación', ref: '/programacion' },
-                { icon: 'state-machine', text: 'Inteligencia Artificial', ref: '/ia' },
-                { icon: 'trophy-variant', text: 'Deportes', ref: '/deportes' },
-                { icon: 'security', text: 'Ciberseguridad', ref: '/ciberseguridad' },
-                { icon: 'monitor-edit', text: 'Software & Hardware', ref: '/s&h' },
-                { icon: 'memory', text: 'Electrónica', ref: '/electronica' },
-                { icon: 'music', text: 'Música', ref: '/musica' },
-                { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico', ref: '/itm' },
+                { icon: 'face-recognition', text: 'Anime', ref: '/community/anime' },
+                { icon: 'poker-chip', text: 'Gaming', ref: '/community/gaming' },
+                { icon: 'laptop', text: 'Tecnología', ref: '/community/tecnologia' },
+                { icon: 'xml', text: 'Programación', ref: '/community/programacion' },
+                { icon: 'state-machine', text: 'Inteligencia Artificial', ref: '/community/ia' },
+                { icon: 'trophy-variant', text: 'Deportes', ref: '/community/deportes' },
+                { icon: 'security', text: 'Ciberseguridad', ref: '/community/ciberseguridad' },
+                { icon: 'monitor-edit', text: 'Software & Hardware', ref: '/community/sw&hw' },
+                { icon: 'memory', text: 'Electrónica', ref: '/community/electronica' },
+                { icon: 'music', text: 'Música', ref: '/community/musica' },
+                { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico', ref: '/community/itm' },
             ],
         }
     }
