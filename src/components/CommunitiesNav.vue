@@ -12,13 +12,11 @@
                     expanded
                     v-for="(menu, index) in communities"
                     :key="index"
-                    tag="router-link"
-                    :to="{path: menu.ref}"
                     class="has-text-weight-bold is-justify-content-left is-bg-white"
                     type="is-light"
                     size="is-default"
                     :icon-left="menu.icon"
-                    :label="menu.text"/>
+                    :label="menu.text" @click="sendCommunity(menu)"/>
                 </div>
             </div>
         </div>
@@ -44,6 +42,12 @@ export default {
                 { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico', ref: '/community/itm' },
             ],
         }
+    },
+    methods: {
+        sendCommunity(menu){
+            this.$store.commit('setCommunity', menu)
+            this.$router.push('/community/'+menu.id)
+        }
+        }
     }
-}
 </script>

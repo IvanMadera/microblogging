@@ -6,11 +6,16 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     texto: '',
-    tareas: []
+    tareas: [],
+    currentCommunity: {}
   },
   mutations: {
+      setCommunity(state, value){
+        state.currentCommunity = value
+      }
   },
   actions: {
+      
   },
   modules: {
   }

@@ -39,7 +39,7 @@
                         <b-navbar-item
                             v-for="(menu, index) in menus"
                             :key="index"
-                            :value="menu" aria-role="listitem" tag="router-link" :to="{path: menu.ref}">
+                            :value="menu" aria-role="listitem" @click="sendCommunity(menu)">
                             <div class="media">
                                 <b-icon class="media-left" :icon="menu.icon"></b-icon>
                                 <div class="media-content">
@@ -127,6 +127,12 @@ import ProfileModal from '@/components/ProfileModal.vue'
         components: {
             ProfileModal
         },
+        methods: {
+        sendCommunity(menu){
+            this.$store.commit('setCommunity', menu)
+            this.$router.push('/community/'+menu.id)
+        }
+            },
         computed: {
             filteredDataArray() {
                 return this.data.filter((option) => {
