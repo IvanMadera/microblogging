@@ -1,35 +1,37 @@
 <template>
     <div>
         <NavReport/>
-        <Tab title="Reportes"/>
-        <div class="container has-text-left">
-            <b-table striped hoverable :data="data">
-                <b-table-column field="id" label="ID" sortable v-slot="props">
-                    {{props.row.id}}
-                </b-table-column>
-                <b-table-column field="data.f_name" label="Nombre" v-slot="props">
-                    {{props.row.f_name}}
-                </b-table-column>
-                <b-table-column field="data.l_name" label="Apellido" v-slot="props">
-                    {{props.row.l_name}}
-                </b-table-column>
-                <b-table-column field="data.date" label="Fecha" v-slot="props" centered>
-                    <span class="tag is-blue-ocean-tag">
-                        {{props.row.date}}
-                    </span>
-                </b-table-column>
-                <b-table-column field="reports" label="Reportes" v-slot="props" sortable centered>
-                    <span class="tag is-deep-ocean-tag">
-                        {{props.row.reports}}
-                    </span>
-                </b-table-column>
-                <b-table-column field="data.content" label="Contenido" v-slot="props">
-                    {{props.row.content}}
-                </b-table-column>
-                <b-table-column>
-                    <b-button class="is-fullwidth is-light-ocean" type="is-light" icon-right="delete" size="is-small"/>
-                </b-table-column>
-            </b-table>
+        <div class="container">
+            <div class="mb-2"><Tab/></div>
+            <div class="container has-text-left">
+                <b-table striped hoverable :data="data">
+                    <b-table-column field="id" label="ID" sortable v-slot="props">
+                        {{props.row.id}}
+                    </b-table-column>
+                    <b-table-column field="data.f_name" label="Nombre" v-slot="props">
+                        {{props.row.f_name}}
+                    </b-table-column>
+                    <b-table-column field="data.l_name" label="Apellido" v-slot="props">
+                        {{props.row.l_name}}
+                    </b-table-column>
+                    <b-table-column field="data.date" label="Fecha" v-slot="props" centered>
+                        <span class="tag is-blue-ocean-tag">
+                            {{props.row.date}}
+                        </span>
+                    </b-table-column>
+                    <b-table-column field="reports" label="Reportes" v-slot="props" sortable centered>
+                        <span class="tag is-deep-ocean-tag">
+                            {{props.row.reports}}
+                        </span>
+                    </b-table-column>
+                    <b-table-column field="data.content" label="Contenido" v-slot="props">
+                        {{props.row.content}}
+                    </b-table-column>
+                    <b-table-column>
+                        <b-button class="is-fullwidth is-light-ocean" type="is-light" icon-right="delete" size="is-small"/>
+                    </b-table-column>
+                </b-table>
+            </div>
         </div>
     </div>
 </template>

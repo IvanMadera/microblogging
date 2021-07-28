@@ -14,6 +14,12 @@
 .is-ocean:hover{
     background-color: #132C33 !important;
 }
+
+/* Tab */
+.is-ocean-background{
+    background-color: #126E82;
+}
+
 /* Pub Input*/
 .is-gray{
     background-color: white !important;

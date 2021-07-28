@@ -2,7 +2,7 @@
   <div>
     <NavAdmin/>
     <div class="container">
-      <Tab title="Home"/>
+      <div class="mb-2"><Tab/></div>
       <PubInput/>
       <div class="columns mt-2 is-desktop">
         <div class="column is-12-touch is-3-desktop">
