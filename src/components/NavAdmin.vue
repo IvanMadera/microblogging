@@ -37,9 +37,10 @@
                             </div>
                         </template>
                         <b-navbar-item
-                            v-for="(menu, index) in menus"
+                            v-for="(menu, index) in communities"
                             :key="index"
-                            :value="menu" aria-role="listitem" tag="router-link" :to="{path: menu.ref}">
+                            :value="menu" aria-role="listitem"
+                            @click="sendCommunity(menu)">
                             <div class="media">
                                 <b-icon class="media-left" :icon="menu.icon"></b-icon>
                                 <div class="media-content">
@@ -84,6 +85,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import ProfileModal from '@/components/ProfileModal.vue'
 
     export default {
@@ -94,19 +96,6 @@ import ProfileModal from '@/components/ProfileModal.vue'
                 isScrollable: false,
                 maxHeight: 200,
                 isCardModalActive: false,
-                menus: [
-                    { icon: 'face-recognition', text: 'Anime', ref: '/community/anime' },
-                    { icon: 'poker-chip', text: 'Gaming', ref: '/community/gaming' },
-                    { icon: 'laptop', text: 'Tecnología', ref: '/community/tecnologia' },
-                    { icon: 'xml', text: 'Programación', ref: '/community/programacion' },
-                    { icon: 'state-machine', text: 'Inteligencia Artificial', ref: '/community/ia' },
-                    { icon: 'trophy-variant', text: 'Deportes', ref: '/community/deportes' },
-                    { icon: 'security', text: 'Ciberseguridad', ref: '/community/ciberseguridad' },
-                    { icon: 'monitor-edit', text: 'Software & Hardware', ref: '/community/sw&hw' },
-                    { icon: 'memory', text: 'Electrónica', ref: '/community/electronica' },
-                    { icon: 'music', text: 'Música', ref: '/community/musica' },
-                    { icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico', ref: '/community/itm' },
-                ],
                 data: [
                     'Angular',
                     'Angular 2',
@@ -127,6 +116,12 @@ import ProfileModal from '@/components/ProfileModal.vue'
         components: {
             ProfileModal
         },
+        methods: {
+            sendCommunity(menu){
+                this.$store.commit('setCommunity', menu)
+                this.$router.push('/community/'+menu.id)
+            }
+        },
         computed: {
             filteredDataArray() {
                 return this.data.filter((option) => {
@@ -135,7 +130,8 @@ import ProfileModal from '@/components/ProfileModal.vue'
                         .toLowerCase()
                         .indexOf(this.name.toLowerCase()) >= 0
                 })
-            }
+            },
+            ...mapState(['communities'])
         }
     }
 </script>

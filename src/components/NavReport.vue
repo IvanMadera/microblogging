@@ -37,7 +37,7 @@
                             </div>
                         </template>
                         <b-navbar-item
-                            v-for="(menu, index) in menus"
+                            v-for="(menu, index) in communities"
                             :key="index"
                             :value="menu"
                             aria-role="listitem"
@@ -86,6 +86,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import ProfileModal from '@/components/ProfileModal.vue'
 
     export default {
@@ -96,19 +97,6 @@ import ProfileModal from '@/components/ProfileModal.vue'
                 isScrollable: false,
                 maxHeight: 200,
                 isCardModalActive: false,
-                menus: [
-                    { id: 'anime', icon: 'face-recognition', text: 'Anime'},
-                    { id: 'gaming', icon: 'poker-chip', text: 'Gaming'},
-                    { id: 'tecnologia', icon: 'laptop', text: 'Tecnología'},
-                    { id: 'programacion', icon: 'xml', text: 'Programación'},
-                    { id: 'ia', icon: 'state-machine', text: 'Inteligencia Artificial'},
-                    { id: 'deportes', icon: 'trophy-variant', text: 'Deportes'},
-                    { id: 'ciberseguridad', icon: 'security', text: 'Ciberseguridad'},
-                    { id: 'sw&hw', icon: 'monitor-edit', text: 'Software & Hardware'},
-                    { id: 'electronica', icon: 'memory', text: 'Electrónica'},
-                    { id: 'musica', icon: 'music', text: 'Música'},
-                    { id: 'itm', icon: 'card-account-details-star-outline', text: 'Instituto Tecnológico'}
-                ],
                 data: [
                     'Angular',
                     'Angular 2',
@@ -130,11 +118,11 @@ import ProfileModal from '@/components/ProfileModal.vue'
             ProfileModal
         },
         methods: {
-        sendCommunity(menu){
-            this.$store.commit('setCommunity', menu)
-            this.$router.push('/community/'+menu.id)
-        }
-            },
+            sendCommunity(menu){
+                this.$store.commit('setCommunity', menu)
+                this.$router.push('/community/'+menu.id)
+            }
+        },
         computed: {
             filteredDataArray() {
                 return this.data.filter((option) => {
@@ -143,7 +131,8 @@ import ProfileModal from '@/components/ProfileModal.vue'
                         .toLowerCase()
                         .indexOf(this.name.toLowerCase()) >= 0
                 })
-            }
+            },
+            ...mapState(['communities'])
         }
     }
 </script>
