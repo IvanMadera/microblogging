@@ -2,8 +2,8 @@
     <div>
         <div class="card">
             <div class="modal-card" style="width: auto;" scroll="keep">
-                <header class="modal-card-head">
-                    <p class="modal-card-title has-text-info">Perfil de usuario</p>
+                <header class="modal-card-head is-ocean-background">
+                    <p class="modal-card-title has-text-weight-bold has-text-white">Perfil de usuario</p>
                 </header>
             </div>
             <figure class="image is-4by3">

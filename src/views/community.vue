@@ -11,9 +11,11 @@
         </div>
         <div class="column is-12-touch is-9-desktop">
           <div class="mb-2">
-
-            <Headboard icono="face-recognition" community="Comunidad"/>
+            <Headboard/>
           </div>
+          <b-message title="Warning" type="is-info" aria-close-label="Close message">
+            Selecciona la comunidad en la barra lateral izquierda, en el caso de moviles en el navbar por cualquier error
+          </b-message>
           <Board/>
           <Board/>
           <Board/>

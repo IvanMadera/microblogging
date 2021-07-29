@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     texto: '',
     tareas: [],
-    currentCommunity: {},
+    currentCommunity: {icon: 'account-group', text: 'Comunidades'},
     communities: [
       { id: 'anime', icon: 'face-recognition', text: 'Anime'},
       { id: 'gaming', icon: 'poker-chip', text: 'Gaming'},
