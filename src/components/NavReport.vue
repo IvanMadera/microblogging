@@ -39,11 +39,9 @@
                         <b-navbar-item
                             v-for="(menu, index) in menus"
                             :key="index"
-<<<<<<< HEAD
-                            :value="menu" aria-role="listitem" @click="sendCommunity(menu)">
-=======
-                            :value="menu" aria-role="listitem" tag="router-link" :to="'/community/'+menu.id">
->>>>>>> master
+                            :value="menu"
+                            aria-role="listitem"
+                            @click="sendCommunity(menu)">
                             <div class="media">
                                 <b-icon class="media-left" :icon="menu.icon"></b-icon>
                                 <div class="media-content">

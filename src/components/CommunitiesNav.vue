@@ -12,11 +12,6 @@
                     expanded
                     v-for="(menu, index) in communities"
                     :key="index"
-<<<<<<< HEAD
-=======
-                    tag="router-link"
-                    :to="'/community/'+menu.id"
->>>>>>> master
                     class="has-text-weight-bold is-justify-content-left is-bg-white"
                     type="is-light"
                     size="is-default"
