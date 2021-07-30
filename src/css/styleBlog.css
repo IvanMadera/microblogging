@@ -1,6 +1,6 @@
 /* Nav */
 .is-ocean-inverted, .is-ocean-inverted:active{
-    background-color: transparent !important;
+    background-color: white !important;
     color: #126E82 !important;
 }
 .is-ocean-inverted:hover {

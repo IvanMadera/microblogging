@@ -3,8 +3,8 @@
     <NavAdmin/>
     <div class="container">
       <div class="mb-2"><Tab/></div>
-      <PubInput/>
-      <div class="columns mt-2 is-desktop">
+      <PubInput class="mb-2"/>
+      <div class="columns is-desktop">
         <div class="column is-12-touch is-3-desktop">
           <CommunitiesNav class="is-hidden-touch"/>
           <TopLeader class="mt-2"/>
