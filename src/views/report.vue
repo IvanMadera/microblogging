@@ -4,11 +4,11 @@
         <div class="container">
             <div class="mb-2"><Tab/></div>
             <div class="container has-text-left">
-                <b-table striped hoverable :data="data">
+                <b-table striped hoverable :data="users">
                     <b-table-column field="id" label="ID" sortable v-slot="props">
                         {{props.row.id}}
                     </b-table-column>
-                    <b-table-column field="data.f_name" label="Nombre" v-slot="props">
+                    <!-- <b-table-column field="data.f_name" label="Nombre" v-slot="props">
                         {{props.row.f_name}}
                     </b-table-column>
                     <b-table-column field="data.l_name" label="Apellido" v-slot="props">
@@ -29,7 +29,7 @@
                     </b-table-column>
                     <b-table-column>
                         <b-button class="is-fullwidth is-light-ocean" type="is-light" icon-right="delete" size="is-small"/>
-                    </b-table-column>
+                    </b-table-column> -->
                 </b-table>
             </div>
         </div>
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import NavReport from '@/components/NavReport.vue'
 import Tab from '@/components/Tab.vue'
 
@@ -54,8 +55,20 @@ export default {
                 { id: '3', f_name: 'Chris', l_name: 'Ruz', date: '2020-01-22', reports: 24, content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, blanditiis.'},
                 { id: '4', f_name: 'Andres', l_name: 'Ortiz', date: '2019-12-06', reports: 2, content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, enim.'},
                 { id: '5', f_name: 'Fernando', l_name: 'Herrera', date: '2017-04-19', reports: 21, content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut.'}
-            ]
+            ],
+            users: []
         }
+    },
+    methods:{
+        refreshData(){
+            axios.get("http://localhost:8000/user")
+            .then((response)=>{
+                this.users=response.data;
+            })
+        }
+    },
+    mounted:function(){
+        this.refreshData();
     }    
 }
 </script>
