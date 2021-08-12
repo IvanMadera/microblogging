@@ -4,13 +4,13 @@
             <div class="card-header p-2 is-flex is-flex-direction-column">
                 <div>
                     <b-field>
-                        <b-input type="textarea" minlength="1" maxlength="140" v-model="pub"></b-input>
+                        <b-input type="textarea" minlength="1" maxlength="140" v-model="content"></b-input>
                     </b-field>
                 </div>
                 <div class="buttons">
-                    <b-button class="is-light-ocean" type="is-light" @click="addPub">Publicar</b-button>
+                    <b-button class="is-light-ocean" type="is-light" @click="createClick">Publicar</b-button>
                     <b-dropdown
-                        v-model="selected"
+                        v-model="tag"
                         aria-role="list">
                         <template #trigger="{ active }">
                             <b-button
@@ -32,7 +32,7 @@
                             </div>
                         </b-dropdown-item>
                     </b-dropdown>
-                    <b-button v-show="showtag" class="ml-2 dis-button" disabled>{{selected}}</b-button>
+                    <b-button v-show="showtag" class="ml-2 dis-button" disabled>{{tag}}</b-button>
                 </div>
             </div>
         </div>
@@ -40,12 +40,15 @@
 </template>
 
 <script>
+import axios from 'axios';
 import {mapState} from 'vuex';
 
     export default {
         name: 'Publicacion',
         data() {
             return {
+                content: "",
+                tag: "",
                 nameTag: { icon: 'tag-multiple', text: 'Tags' },
                 etiquetas:[
                     {icon: 'lifebuoy', text: 'Ayuda', description: 'Solicitar apoyo con respecto a lo que refleja el post'},
@@ -58,20 +61,21 @@ import {mapState} from 'vuex';
                     {icon: 'newspaper', text: 'Cursos', description: 'Publicaciones sobre cursos y material autodidáctico'},
                     {icon: 'new-box', text: 'Novedad', description: 'Publicaciones sobre novedades respecto a cualquier tema'}
                 ],
-                showtag: false,
-                pub: '',
-                selected: ''
+                showtag: false
             }
         },
         computed: {
             ...mapState(['tareas'])
         },
         methods: {
-            addPub() {
-                this.tareas.push({
-                    pub: this.pub
+            createClick(){
+                axios.post("http://localhost:8000/post",{
+                    content:this.content,
+                    tag:this.tag
+                })
+                .then((response)=>{
+                    this.content = "";
                 });
-                this.pub = '';
             }
         }
     }

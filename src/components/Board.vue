@@ -6,7 +6,7 @@
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
                 <p class="card-header-title">
-                    {{p.user}}
+                    {{p.id}}
                 </p>
                 <b-dropdown v-model="reports" class="is-align-items-center">
                     <template #trigger>
@@ -97,6 +97,7 @@ export default {
             showtag: false,
             selected: '',
             reports: 0,
+            post: [],
             nameGift: { icon: 'gift', text: 'Premios'},
             gifts:[
                 { icon: 'hexagon-outline', val: 20},
@@ -106,8 +107,7 @@ export default {
                 { icon: 'hexagon-slice-4', val: 500},
                 { icon: 'hexagon-slice-5', val: 1000},
                 { icon: 'hexagon-slice-6', val: 5000}
-            ],
-            post: []
+            ]
         }
     },
     components: {
