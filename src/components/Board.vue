@@ -1,12 +1,12 @@
 <template>
     <div v-show="showPublication">
-        <div class="card pb-2 mt-2 content-border">
+        <div class="card pb-2 mt-2 content-border" v-for="(p, index) in post" :key="index">
             <div class="card-header p-2">
                 <figure class="image is-48x48">
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
                 <p class="card-header-title">
-                    Ivan Gabriel Madera Torres
+                    {{p.user}}
                 </p>
                 <b-dropdown v-model="reports" class="is-align-items-center">
                     <template #trigger>
@@ -32,15 +32,16 @@
             </div>
             <div class="card-content has-text-left">
                 <div class="content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum vero laboriosam earum molestiae doloribus eum nemo possimus iusto nesciun.
-                    <span class="tag is-blue-ocean-tag mr-1 mt-1"><b-icon icon="lifebuoy" size="is-small" /><p>Interesante</p></span>
+                    {{p.content}}
+                    <span class="tag is-blue-ocean-tag mr-1 mt-1"><b-icon icon="tag" size="is-small" /><p>{{p.tag}}</p></span>
                 </div>
             </div>
             <hr class="dropdown-divider">
             <div class="is-flex is-justify-content-space-between m-2">
                 <div>
-                    <span class="tag is-light-ocean-tag mr-1"><b-icon icon="thumb-up" size="is-small" /><p>150</p></span>
-                    <span class="tag is-light-ocean-tag"><b-icon icon="thumb-down" size="is-small" /><p>150</p></span>
+                    <span class="tag is-light-ocean-tag mr-1"><b-icon icon="thumb-up" size="is-small" /><p>{{p.like_q}}</p></span>
+                    <span class="tag is-light-ocean-tag mr-1"><b-icon icon="thumb-down" size="is-small" /><p>{{p.dislike_q}}</p></span>
+                    <span class="tag is-light-ocean-tag"><b-icon icon="comment" size="is-small" /><p>{{p.comment_q}}</p></span>
                 </div>
                 <div>
                     <div class="is-flex">
@@ -84,7 +85,7 @@
 
 <script>
 import Comments from '@/components/Comments.vue'
-
+import axios from 'axios';
 import {mapState} from 'vuex';
 
 export default {
@@ -105,7 +106,8 @@ export default {
                 { icon: 'hexagon-slice-4', val: 500},
                 { icon: 'hexagon-slice-5', val: 1000},
                 { icon: 'hexagon-slice-6', val: 5000}
-            ]
+            ],
+            post: []
         }
     },
     components: {
@@ -113,6 +115,17 @@ export default {
     },
     computed: {
         ...mapState(['tareas'])
-    }
+    },
+    methods:{
+        refreshData(){
+            axios.get("http://localhost:8000/post")
+            .then((response)=>{
+                this.post=response.data;
+            })
+        }
+    },
+    mounted:function(){
+        this.refreshData();
+    } 
 }
 </script>

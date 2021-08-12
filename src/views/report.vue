@@ -4,7 +4,7 @@
         <div class="container">
             <div class="mb-2"><Tab/></div>
             <div class="container has-text-left">
-                <b-table striped hoverable :data="users">
+                <b-table striped hoverable :data="report">
                     <b-table-column field="id" label="ID" sortable v-slot="props">
                         {{props.row.id}}
                     </b-table-column>
@@ -18,10 +18,10 @@
                         <span class="tag is-blue-ocean-tag">
                             {{props.row.date}}
                         </span>
-                    </b-table-column>
+                    </b-table-column> -->
                     <b-table-column field="reports" label="Reportes" v-slot="props" sortable centered>
                         <span class="tag is-deep-ocean-tag">
-                            {{props.row.reports}}
+                            {{props.row.report_q}}
                         </span>
                     </b-table-column>
                     <b-table-column field="data.content" label="Contenido" v-slot="props">
@@ -29,7 +29,7 @@
                     </b-table-column>
                     <b-table-column>
                         <b-button class="is-fullwidth is-light-ocean" type="is-light" icon-right="delete" size="is-small"/>
-                    </b-table-column> -->
+                    </b-table-column>
                 </b-table>
             </div>
         </div>
@@ -56,14 +56,14 @@ export default {
                 { id: '4', f_name: 'Andres', l_name: 'Ortiz', date: '2019-12-06', reports: 2, content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, enim.'},
                 { id: '5', f_name: 'Fernando', l_name: 'Herrera', date: '2017-04-19', reports: 21, content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut.'}
             ],
-            users: []
+            report: []
         }
     },
     methods:{
         refreshData(){
-            axios.get("http://localhost:8000/user")
+            axios.get("http://localhost:8000/report")
             .then((response)=>{
-                this.users=response.data;
+                this.report=response.data;
             })
         }
     },

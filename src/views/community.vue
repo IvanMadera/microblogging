@@ -17,8 +17,6 @@
             Selecciona la comunidad en la barra lateral izquierda, en el caso de moviles en el navbar por cualquier error
           </b-message>
           <Board/>
-          <Board/>
-          <Board/>
         </div>
       </div>
     </div>
