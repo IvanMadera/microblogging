@@ -9,18 +9,27 @@
             </template>
 
             <template #start>
-                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <b-navbar-item>
                     <div class="buttons">
-                        <b-button class="is-ocean-inverted" type="is-light" icon-left="home" size="is-default">
-                            <strong class="has-text-italic">Home</strong>
-                        </b-button>
+                        <b-button
+                        tag="router-link" :to="{ path: '/' }"
+                        class="is-ocean-inverted has-text-weight-bold"
+                        type="is-light"
+                        icon-left="home"
+                        size="is-default"
+                        label="Home"/>
                     </div>
                 </b-navbar-item>
-                <b-navbar-item tag="router-link" :to="{ path: '/report' }">
+                <b-navbar-item>
                     <div class="buttons">
-                        <b-button class="is-ocean-inverted" type="is-light" icon-left="flag" size="is-default">
-                            <strong>Reportes</strong>
-                        </b-button>
+                        <b-button
+                        tag="router-link"
+                        :to="{ path: '/report' }"
+                        class="is-ocean-inverted has-text-weight-bold"
+                        type="is-light"
+                        icon-left="flag"
+                        size="is-default"
+                        label="Reportes"/>
                     </div>
                 </b-navbar-item>
                 <b-navbar-item class="has-text-left">

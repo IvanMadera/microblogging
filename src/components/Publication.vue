@@ -75,6 +75,8 @@ import {mapState} from 'vuex';
                 })
                 .then((response)=>{
                     this.content = "";
+                    this.showtag = !this.showtag;
+                    this.tag = "";
                 });
             }
         }
