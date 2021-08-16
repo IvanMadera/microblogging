@@ -12,6 +12,7 @@ const routes = [
    {
   path: '/community/:id',
   name: 'community',
+  props: true,
   component: () => import(/* webpackChunkName: "community" */ '../views/community.vue')
   },
   {

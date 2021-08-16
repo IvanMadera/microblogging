@@ -44,6 +44,28 @@ export default {
     TopLeader,
     Board,
     Home
+  },
+  props: {
+    id: {
+      default: null
+    }
+  },
+  methods: {
+    changeCommunity(id) {
+      const community = this.$store.state.communities.filter(el => el.id == id)[0]
+      this.$store.commit('setCommunity', community)
+      this.$router.push('/community/'+community.id)
+    }
+  },
+  created() {
+    // console.log(this.id);
+    // console.log(this.$store.state.currentCommunity);
+    this.changeCommunity(this.id)    
+  },
+  watch: {
+    id(value){
+      this.changeCommunity(value)    
+    }
   }
 }
 </script>
