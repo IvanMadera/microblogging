@@ -1,27 +1,31 @@
-/* :root{
-    
-} */
+:root{
+    /*Color palette*/
+    --gray: #D8E3E7;
+    --light-ocean: #51C4D3;
+    --ocean: #126E82;
+    --deep-ocean: #132C33;
+}
 
 /* Nav */
 .is-ocean-inverted, .is-ocean-inverted:active{
     background-color: white !important;
-    color: #126E82 !important;
+    color: var(--ocean) !important;
 }
 .is-ocean-inverted:hover {
-    background-color: #126E82 !important;
+    background-color: var(--ocean) !important;
     color: white !important;
 }
 .is-ocean, .is-ocean:active{
-    background-color: #126E82 !important;
+    background-color: var(--ocean) !important;
     color: white !important;
 }
 .is-ocean:hover{
-    background-color: #132C33 !important;
+    background-color: var(--deep-ocean) !important;
 }
 
 /* Tab */
 .is-ocean-background{
-    background-color: #126E82;
+    background-color: var(--ocean);
 }
 
 /* Pub Input*/
@@ -41,14 +45,14 @@
 
 /* Publication */
 .is-light-ocean, .is-light-ocean:active {
-    background-color: #51C4D3 !important;
+    background-color: var(--light-ocean) !important;
     color: white !important;
 }
 .is-light-ocean:hover {
-    background-color: #126E82 !important;
+    background-color: var(--ocean) !important;
 }
 .dis-button {
-    background-color: #126E82 !important;
+    background-color: var(--ocean) !important;
     color: white !important;
 }
 
@@ -61,44 +65,44 @@
 }
 .color-header {
     border-radius: 0.25rem 0.25rem 0 0 !important;
-    background-color: #126E82;
+    background-color: var(--ocean);
     color: white !important;
 }
 .content-border {
-    border: 1px solid #51C4D3;
+    border: 1px solid var(--light-ocean);
 }
 
 /* Head Board*/
 .back-gradient {
-    background-image: linear-gradient(141deg, #51C4D3 0%, #126E82 71%, #132C33 100%) !important;
+    background-image: linear-gradient(141deg, var(--deep-ocean) 0%, var(--light-ocean) 71%, var(--deep-ocean) 100%) !important;
 }
 
 /* Board */
 .is-deep-ocean, .is-deep-ocean:active{
-    background-color: #132C33 !important;
+    background-color: var(--deep-ocean) !important;
     color: white !important;
 }
 .is-deep-ocean:hover{
-    background-color: #51C4D3 !important;
+    background-color: var(--light-ocean) !important;
 }
 .is-gray-reaction, .is-grey-reaction:active{
     border-radius: 0;
-    background-color: #D8E3E7 ;
-    color: #126E82 !important;
+    background-color: var(--gray) ;
+    color: var(--ocean) !important;
 }
 .is-gray-reaction:hover {
     background-color: #c8d0d3;
 }
 .is-light-ocean-tag {
-    background-color: #51C4D3 !important;
+    background-color: var(--light-ocean) !important;
     color: white !important;
 }
 .is-blue-ocean-tag {
-    background-color: #126E82 !important;
+    background-color: var(--ocean) !important;
     color: white !important;
 }
 .is-deep-ocean-tag {
-    background-color: #132C33 !important;
+    background-color: var(--deep-ocean) !important;
     color: white !important;
 }
 

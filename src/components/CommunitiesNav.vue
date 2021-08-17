@@ -36,7 +36,7 @@ export default {
     methods: {
         sendCommunity(menu){
             this.$store.commit('setCommunity', menu)
-            this.$router.push('/community/'+menu.id)
+            this.$router.push('/community/'+menu.id).catch(()=>{});
         }
     },
     computed: {

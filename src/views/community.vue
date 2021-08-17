@@ -50,8 +50,14 @@ export default {
   methods: {
     changeCommunity(id) {
       const community = this.$store.state.communities.filter(el => el.id == id)[0]
-      this.$store.commit('setCommunity', community)
-      this.$router.push('/community/'+community.id)
+      const compare = this.$store.state.communities.filter(el => el.id == id).length
+      if(compare != 0){
+        this.$store.commit('setCommunity', community)
+        this.$router.push('/community/'+community.id).catch(()=>{});
+      }
+      else{
+        this.$router.push('/')
+      }
     }
   },
   created() {
