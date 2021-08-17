@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card">
-            <section class="hero is-primary back-gradient">
+            <section class="hero is-primary back-gradient border-card">
                 <div class="hero-body">
                     <p class="is-size-2 is-size-2-mobile has-text-weight-bold">
                         <b-icon size="is-medium" :icon="currentCommunity.icon"/>

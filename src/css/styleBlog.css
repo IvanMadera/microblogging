@@ -1,3 +1,7 @@
+/* :root{
+    
+} */
+
 /* Nav */
 .is-ocean-inverted, .is-ocean-inverted:active{
     background-color: white !important;
@@ -56,6 +60,7 @@
     background-color: #eeeeee !important;
 }
 .color-header {
+    border-radius: 0.25rem 0.25rem 0 0 !important;
     background-color: #126E82;
     color: white !important;
 }
@@ -99,5 +104,9 @@
 
 /* Comment Unit */
 .border-comment {
-    border-radius: 15px;
+    border-radius: 15px !important;
+}
+
+.border-card {
+    border-radius: 0.25rem !important;
 }

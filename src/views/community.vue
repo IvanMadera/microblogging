@@ -13,9 +13,6 @@
           <div class="mb-2">
             <Headboard/>
           </div>
-          <b-message title="Warning" type="is-info" aria-close-label="Close message">
-            Selecciona la comunidad en la barra lateral izquierda, en el caso de moviles en el navbar por cualquier error
-          </b-message>
           <Board/>
         </div>
       </div>

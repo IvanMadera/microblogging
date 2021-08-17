@@ -8,7 +8,7 @@
                     </b-field>
                 </div>
                 <div class="buttons">
-                    <b-button class="is-light-ocean" type="is-light" @click="createClick">Publicar</b-button>
+                    <b-button class="is-light-ocean" type="is-light">Publicar</b-button>
                     <b-dropdown
                         v-model="tag"
                         aria-role="list">
@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import {mapState} from 'vuex';
 
     export default {
@@ -66,19 +65,6 @@ import {mapState} from 'vuex';
         },
         computed: {
             ...mapState(['tareas'])
-        },
-        methods: {
-            createClick(){
-                axios.post("http://localhost:8000/post",{
-                    content:this.content,
-                    tag:this.tag
-                })
-                .then((response)=>{
-                    this.content = "";
-                    this.showtag = !this.showtag;
-                    this.tag = "";
-                });
-            }
         }
     }
 </script>
