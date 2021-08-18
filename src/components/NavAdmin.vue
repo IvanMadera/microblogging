@@ -46,10 +46,10 @@
                             </div>
                         </template>
                         <b-navbar-item
-                            v-for="(menu, index) in communities"
-                            :key="index"
-                            :value="menu" aria-role="listitem"
-                            @click="sendCommunity(menu)">
+                        v-for="(menu, index) in communities"
+                        :key="index"
+                        :value="menu" aria-role="listitem"
+                        @click="sendCommunity(menu)">
                             <div class="media">
                                 <b-icon class="media-left" :icon="menu.icon"></b-icon>
                                 <div class="media-content">
@@ -101,9 +101,6 @@ import ProfileModal from '@/components/ProfileModal.vue'
         name: 'Navbar',
         data() {
             return {
-                navigation: 'home',
-                isScrollable: false,
-                maxHeight: 200,
                 isCardModalActive: false,
                 data: [
                     'Angular',

@@ -5,9 +5,7 @@
                 <figure class="image is-48x48">
                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
-                <p class="card-header-title">
-                    Ivan Gabriel Madera Torres
-                </p>
+                <p class="card-header-title">Ivan Gabriel Madera Torres</p>
                 <b-dropdown class="is-align-items-center">
                     <template #trigger>
                         <b-button type="is-light" icon-left="dots-horizontal"/>
@@ -51,13 +49,11 @@
                             aria-role="list">
                             <template #trigger>
                                 <b-button
-                                    class="is-small"
-                                    type="is-light is-deep-ocean"
-                                    icon-right="gift">
-                                    Premios
-                                </b-button>
+                                class="is-small"
+                                type="is-light is-deep-ocean"
+                                label="Premios"
+                                icon-right="gift"/>
                             </template>
-
                             <b-dropdown-item v-for="(gift, index) in gifts" :key="index" :value="gift.val" @click="showtag= true" aria-role="listitem">
                                 <div class="media has-text-left">
                                     <b-icon class="media-left" :icon="gift.icon"></b-icon>

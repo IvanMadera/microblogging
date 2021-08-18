@@ -9,19 +9,15 @@
                 </div>
                 <div class="buttons">
                     <b-button class="is-light-ocean" type="is-light">Publicar</b-button>
-                    <b-dropdown
-                        v-model="tag"
-                        aria-role="list">
+                    <b-dropdown v-model="tag" aria-role="list">
                         <template #trigger="{ active }">
                             <b-button
-                                class="is-light-ocean"
-                                icon-left="tag"
-                                type="is-light"
-                                :icon-right="active ? 'menu-up' : 'menu-down'">
-                                Tag
-                            </b-button>
+                            class="is-light-ocean"
+                            icon-left="tag"
+                            type="is-light"
+                            label="tag"
+                            :icon-right="active ? 'menu-up' : 'menu-down'"/>
                         </template>
-
                         <b-dropdown-item v-for="(etiqueta, index) in etiquetas" :key="index" :value="etiqueta.text" @click="showtag= true" aria-role="listitem">
                             <div class="media has-text-left">
                                 <b-icon class="media-left" :icon="etiqueta.icon"></b-icon>

@@ -44,10 +44,6 @@ export default {
             isActive: false
         }
     },
-    props: {
-        community: String,
-        icono: String
-    },
     computed: {
         ...mapState(['currentCommunity'])
     }

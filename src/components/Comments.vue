@@ -1,10 +1,11 @@
 <template>
     <div class="card">
         <b-button
-            v-model="showMostrar"
-            type="is-text"
-            v-show="showMostrar"
-            @click="showMostrar = !showMostrar, showSubComment = !showSubComment">Mostrar los comentarios</b-button>
+        v-model="showMostrar"
+        type="is-text"
+        v-show="showMostrar"
+        label="Mostrar los comentarios"
+        @click="showMostrar = !showMostrar, showSubComment = !showSubComment"/>
         <div v-show="showSubComment">
             <CommentUnit/>
             <CommentUnit/>
@@ -18,7 +19,10 @@
                 <b-field class="mt-1">
                     <b-input  class="is-flex is-flex-wrap-wrap" expanded placeholder="Escribe un comentario" maxlength="140"></b-input>
                     <p class="control">
-                        <b-button class="button is-ocean" type="is-light" icon-right="send"></b-button>
+                        <b-button
+                        class="button is-ocean"
+                        type="is-light"
+                        icon-right="send"/>
                     </p>
                 </b-field>
             </div>
