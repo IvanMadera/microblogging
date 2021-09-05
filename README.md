@@ -1,5 +1,9 @@
 # microblogging
 
+## Description
+
+Microblogging is a digital window module. Designed as a social network in blog format.
+
 ## Project setup
 ```
 npm install
