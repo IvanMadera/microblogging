@@ -2,7 +2,7 @@
 
 ## Description
 
-Microblogging is a digital window module. Designed as a social network in blog format.
+Microblogging is a Digital-Window module. Designed as a social network in blog format.
 
 ## Project setup
 ```
